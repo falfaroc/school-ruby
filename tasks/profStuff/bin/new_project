@@ -1,0 +1,11 @@
+cd `cat ~/.git_root`
+project=$1
+if [[ $project = *[!\ ]* ]]; then
+  echo "creating project" $project
+else
+  echo "project consists of spaces only, aborting"
+  exit 1;
+fi
+mkdir $project
+cd $project
+git init

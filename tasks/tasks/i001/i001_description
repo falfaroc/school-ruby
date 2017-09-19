@@ -1,0 +1,38 @@
+i001 is the `install task'.  In order to record practice properly, you need
+to have git running.  In order to record practice on this task, you will 
+need to commit messages whose first line is:
+    RPT: i001 time
+where time is replaced by a numeric value less than or equal to 30 and
+corresponding to the amount of practice time (in minutes) you spent 
+since the last such commit on the task i001.  The body of the message will 
+tell how far you have gotten with the task so far and what problems, 
+if any, you are having completing the task.  Note that these commits 
+are not direct communications with the prof, but instead notes in your
+practice report which probably won't be read until the practice report is 
+marked.
+
+While installing git isn't included in this task, installing Ruby and 
+configuring BitBucket so that you can download the material I have placed
+in your git repository for the class is included as items that can be
+recorded and time spent on will be counted toward the maximum practice 
+time of three hours a week.
+
+You are expected to make notes as you practice and not to wait til the
+end and then produce notes from memory.  In line with this view of 
+proper practice behavior, if the local clock time on the practice time note
+shows less time has passed between two notes than the time on the second
+note indicates, the excess time will be ignored and it will be marked as
+poor recording practice.
+
+Note that time can only be recorded on this task for the first week of
+practice.  If you don't complete it during the first three hours, then
+the extra time you need is from your free time and is not counted as
+practice time.  Furthermore, in order to get credit for this time, you
+have to successfully upload your git log and materials into the course
+repository by the due date for the first practice.
+
+Note you are allowed to ask for help in completing this task as with any
+other task.  You will need to balance the need to put in 3 hours of practice
+time a week against the notion that if you are not making any progress, then
+you aren't learning.  And, of course, if you don't get i001 completed by the
+first due date, you loose a subtantial part of your practice mark.

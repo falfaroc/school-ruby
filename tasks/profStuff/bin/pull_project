@@ -1,0 +1,19 @@
+cd `cat ~/.git_root`
+project=$1
+if [[ $project = *[!\ ]* ]]; then
+  echo "creating project" $project
+else
+  echo "project consists of spaces only, aborting"
+  exit 1;
+fi
+repo=$1_repo
+cd $project
+date > .update-${username}
+git add --all
+git commit -m "downloading from repo"
+git config --global core.editor "/usr/bin/emacs"
+git remote add origin `cat ../${repo}`
+echo ignore message: fatal: remote origin already exists.
+echo `cat ../${repo}`
+git pull
+
