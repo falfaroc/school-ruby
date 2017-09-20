@@ -1,0 +1,63 @@
+r001 is the `ruby task'.  In order to record practice on this task, you 
+will need to commit messages whose first line is:
+    RPT: r001 time
+where time is replaced by a numeric value less than or equal to 30 and
+corresponding to the amount of practice time (in minutes) you spent 
+since the last such commit on the task i001.  The body of the message will 
+tell how far you have gotten with the task so far and what problems, 
+if any, you are having completing the task.  Note that these commits 
+are not direct communications with the prof, but instead notes in your
+practice report which probably won't be read until the practice report is 
+marked.
+
+Unlike the install task which were specific to the first weekly practice, 
+this task can be worked on during any practice time.  Tasks like this
+do not have to be done in order.  Nor do you have to complete one task 
+before starting another.  As part of the quality marking of the task
+reports, there will be certain programs and/or techniques that you will
+be expected to have put in some time with, but not specific tasks that
+you will have been expected to have completed.  As with all tasks (not
+quizzes) in this class, you are allowed to ask for help when you are 
+stuck.  As a rule of thumb, if you haven't made any progress after a
+half hour, it is time to ask for help/clarification.  As long as you
+have ideas to try out, it is worthwhile practice to try them out and
+see how they work.
+
+As usual, you are expected to make notes as you practice and not to wait 
+til the end and then produce notes from memory.  In line with this view of 
+proper practice behavior, if the local clock time on the practice time note
+shows less time has passed between two notes than the time on the second
+note indicates, the excess time will be ignored and it will be marked as
+poor recording practice.
+
+In the r001 directory, I have placed a copy of count_down, having 
+renamed it count_down.rb .  This task involves working with this
+program.
+
+STEP ONE is to create a Minitest test for the code in count_down.rb 
+that checks to see if it takes 120 seconds to run.  Some useful references
+are:
+   https://semaphoreci.com/community/tutorials/getting-started-with-minitest
+   https://docs.ruby-lang.org/en/2.1.0/MiniTest/Assertions.html
+   https://stackoverflow.com/questions/11406410/measure-time-in-ruby
+In order to test the code, we will need to move it from being just statements
+in the file to being inside a method definition.  Also, since we are no longer
+invoking it from the command line, we want to move the reference to 
+ARGV to be a reference to an incoming parameter to the method.
+
+STEP TWO is make sure the code for count_down.rb has been well written.
+We can check that with a tool called reek.  The main source for information
+about reek is 
+    https://github.com/troessner/reek
+
+When I ran reek over my version of doing the above, there were three
+complaints: 2 calls to Time.now, my method that held the original
+count_down code was too long, and I didn't have a descriptive comment
+for my testing class.  The last two were reasonable and I fixed them.
+The first, about calling Time.now twice wasn't wrong as each invokation
+was getting something different.  So this last one I deactivated by
+changing the number of allowed calls to be 2 in the method where I
+was checking time twice using the techniques in
+    https://github.com/troessner/reek/blob/master/docs/Smell-Suppression.md
+
+MORE STEPS TO COME
