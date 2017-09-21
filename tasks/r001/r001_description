@@ -60,4 +60,56 @@ changing the number of allowed calls to be 2 in the method where I
 was checking time twice using the techniques in
     https://github.com/troessner/reek/blob/master/docs/Smell-Suppression.md
 
+STEP THREE is to address the I/O problem.  We have a print method invoked in
+count_down which raises two problems.  The first problem is that it clutters
+the output of the test run (imagine if we ran 1000 tests on this) and 
+slows down the test.  The second problem is that the test methods can't
+see what is being printed and so can check to make sure the right thing
+is printed at the right time.  To start to address this, we change the
+test so that instead of count_down(120), it does CountDown.new.count_down(120).
+This should fail because we haven't created CountDown yet.  So we should
+do so.  The following tutorial note may help
+   http://ruby-for-beginners.rubymonstas.org/writing_classes/initializers.html
+
+Make sure the test works and that reek is happy with the new version.
+
+STEP FOUR is to change the test to do
+     CountDown.new(PrintMethod.new).count_down(120)
+This should fail and need you to create a class PrintMethod that contains a
+method print that prints and you to set up an initializer for CountDown that
+takes such an object and records it in a field of the new instance where it
+can then be invoked by count_down (another change).
+
+Make sure the test works and that reek is happy with the new version.
+
+This sort of refactoring is frequently useful in testing and goes by the
+name Dependency Injection
+    https://en.wikipedia.org/wiki/Dependency_injection
+
+STEP FIVE is to change the test so it now does    
+     CountDown.new(QuietPrintMethod.new).count_down(120)
+This should fail, requiring the creation of QuietPrintMethod which also 
+supports print, but does no I/O.
+
+Make sure the test works and that reek is happy with the new version.
+
+STEP SIX is to remove the invokations to time in the tester and instead
+do
+     fake = QuietPrintMethod.new
+     CountDown.new(fake).count_down(120)
+     duration = fake.timeInterval
+This should fail because we haven't yet implemented timeInterval for
+QuietPrintMethod .  What I want print to do is to record enough
+information so that when it is invoked multiple times in the same
+instance, the method timeInterval will be able to tell me how
+must time passed from the first invocation of print to the last one.
+
+Make sure the test works and that reek is happy with the new version.
+
+Note that we should now be able to remove the suppression of the
+code smell associated with multiple Time.now invocations in the
+test method and there should be none there now -- it should have
+moved to the QuietPrintMethod object where it is now only invoked
+once (textually)
+
 MORE STEPS TO COME
