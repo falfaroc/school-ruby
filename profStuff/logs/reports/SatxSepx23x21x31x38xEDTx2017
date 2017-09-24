@@ -1,0 +1,16 @@
+commit 59175f3f80f4c0c540edf8145b7f06acae65cc9a
+Author: Fernando Campos <fcampos@ztr.com>
+Date:   Fri Sep 22 14:11:47 2017 -0400
+
+    RPT:i001 30 minutes
+    
+    Installing Ruby and configuring BitBucket on Windows.
+    Also, testing transferring files.
+
+commit b8d206c5189448d3892d873d852aac910f5fdcda
+Author: Fernando Campos <falfaroc@uwo.ca>
+Date:   Fri Sep 22 14:56:48 2017 -0400
+
+    RPT: i002 25 minutes
+    
+    Installing gem and bundler on my Linux Box

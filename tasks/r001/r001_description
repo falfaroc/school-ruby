@@ -112,4 +112,90 @@ test method and there should be none there now -- it should have
 moved to the QuietPrintMethod object where it is now only invoked
 once (textually)
 
+STEP SEVEN is fixing things so we can both test and use count_down.  Currently
+when we run count_down, we are only running automated test cases.  But some
+times people might actually want to use the program.  We can remove the testing
+stuff, but we might break something when we did it and we might need it back
+at some later point when a new feature was added.  The solution is to create
+a structure of three files.  One file is the code that is shared beween the
+user's view and the tester's view of this program.  Another file for the code
+specific to the user's view (such as the class that supports actual printing).
+And another file contains the code specific to the tester's view.  The 
+remaining problem is to figure out how to let the user and tester view code
+access the common view.  Useful stackoverflows on this are:
+   https://stackoverflow.com/questions/3672586/what-is-the-difference-between-require-relative-and-require-in-ruby
+   https://stackoverflow.com/questions/16856243/how-to-require-a-ruby-file-from-another-directory
+   https://stackoverflow.com/questions/318144/what-is-the-difference-between-include-and-require-in-ruby
+When checking to make sure that you did this reorganization correctly, you want
+to both run the program as a user and run it as a tester.  More generally,
+it is important that a programmer uses the program they are developing as
+some problems get hidden by the testing infrastructure and only show up in
+`production' mode https://en.wikipedia.org/wiki/Eating_your_own_dog_food .
+
+Make sure reek is happy with all three files.
+
+STEP EIGHT is to write a test to check if the first line printed by the
+program is correct and to get it to pass.  That is:
+     fake = QuietPrintMethod.new
+     CountDown.new(fake).count_down(120)
+     message = fake.log(1)
+     assert_equals message, "120 seconds left"
+Now we have to start working on QuietPrintMethod to make our test pass.
+Basically what we want is for print to store a log of the messages printed in
+an array in the object and then log to let us retrieve a message from the array.
+
+Make sure the test works and that reek is happy with the new version.
+
+STEP NINE is to write a test to check if pair of consecutive message is 
+separated by roughly 1 second and get it to pass.
+     fake = QuietPrintMethod.new
+     CountDown.new(fake).count_down(120)
+     current_time = fake.time_log(1)
+     number_of_messages = fake.number_of_messages
+     if number_of_messages > 1 
+         (number_of_messages - 1).downto(1) { | next_message |
+             next_time = fake.time_log(next_message)
+             # put your comparison assert here
+             current_time = next_time
+         }
+     end
+
+Make sure the test works and that reek is happy with the new version.
+
+STEP TEN is to consider something we haven't worried about yet, i.e.,
+what happens if there is an infinite loop on print.  Figure out how to
+write a test specifically to see what happens when
+     QuietPrintMethod.new(10)
+is used to print 9 messages, 10 messages, and 11 messages.  Make sure that
+9 and 10 work ok but that 11 causes a quit out of the QuietPrintMethod 
+instance that is caught in the tester (i.e., we won't view the loop as an
+error, but we will simply stop the loop).  To get this to work, you want to
+look at how exception handling works in Ruby, cf.
+   http://blog.honeybadger.io/a-beginner-s-guide-to-exceptions-in-ruby/
+   https://stackoverflow.com/questions/51021/what-is-the-difference-between-raising-exceptions-vs-throwing-exceptions-in-ruby
+   https://stackoverflow.com/questions/3716801/what-is-catch-and-throw-used-for-in-ruby/
+
+Make sure the test works and that reek is happy with the new version.
+
+STEP ELEVEN is to consider the notion that one beep is not enough.  Set up a
+test that invokes the shared code with a parameter for how many beeps 
+(each separated by a second) the code should perform.  It should check to 
+see that that number of beeps was actually performed using our log access 
+methods to QuietPrintMethod that were implemented earlier.  Then the
+shared code needs to be modified so that it will print that number of beeps.
+You should also check out the user view by having it do 1000 beeps (hmmm, 1000
+seconds is nearly 17 minutes -- so let it beep for a while and then use 
+control-C to kill it).
+
+Make sure the test works and that reek is happy with the new version.
+
+STEP TWELVE: Remember the test that uses time_interval ?  Well it is 
+probably having troubles with multiple copies of two kinds of print
+messages.  That time_interval is only about the waiting messages and
+the first beep is application specific knowledge that shouldn't be in
+the QuietPrintMethod class, but in some other class that the tester uses
+to analyze the log from the QuietPrintMethod class.
+
+Make sure the test works and that reek is happy with the new version.
+
 MORE STEPS TO COME
