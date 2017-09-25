@@ -1,0 +1,222 @@
+FIRST QUIZ: CS4472A Tuesday, 3 October 2017, 7:10 pm, Room MC17
+
+NAME AS APPEARS ON STUDENT ID:
+
+STUDENT ID NUMBER:
+
+UWO/CONFLUENCE USER NAME:
+
+REMINDERS:
+** (from course outline) The quiz is closed book, 
+   closed notes, with no electronic devices allowed, with particular 
+   reference to any electronic devices that are capable of communication 
+   and/or storing information.
+
+** Write neatly.  If the marker can't read it, it is wrong.
+
+** This quiz shouldn't take long to write.  On the other hand, time
+   will pass.  It is a 30 minute quiz with 20 questions.  If you complete 
+   a question every  minute you will still have 10 minutes at the end to 
+   double check that everything is in order.
+
+** While you are not allowed to open the exam booklet until the
+   proctor says you can, you can fill out the information on the cover
+   page.  You should also get out your student id and make sure your
+   pencils and pens are in order.  If you need to get something out of
+   your jacket or knapsack once the exam has started, raise your hand
+   and wait til a proctor comes to you to oversee the matter.
+
+QUESTION 1: The protocols for practice expect that the longest amount of
+time that you will practice before recording a note is ANSWER
+ANSWER=
+
+QUESTION 2: q29
+ANSWER=
+
+QUESTION 3: Although we often think of programs as taking inputs and
+producing outputs, a higher level view of what is going on is to think of
+the programs as ANSWER about how to take inputs and produce outputs.
+ANSWER=
+
+QUESTION 4: The number of weekly practices that CS4472 will have this
+semester is ANSWER
+ANSWER=
+
+QUESTION 5: The per cent of the total mark allocated for all the practice
+reviews is ANSWER
+ANSWER=
+
+QUESTION 6: The practice technique advocated in this class is a
+modification of the ANSWER
+ANSWER=
+
+QUESTION 7: q30
+ANSWER=
+
+QUESTION 8: A main theme behind the practice technique advocated in this
+class is that in order to improve your programming, ANSWER
+ANSWER=
+
+QUESTION 9: The number of quizzes CS4472 will have this semester is
+ANSWER
+ANSWER=
+
+QUESTION 10: q20
+ANSWER=
+
+QUESTION 11: q28
+ANSWER=
+
+QUESTION 12: q23
+ANSWER=
+
+QUESTION 13: The scripts that were designed to aid the practice process
+assume that you will be uploading a copy of your work to BitBucket every
+time you ANSWER
+ANSWER=
+
+QUESTION 14: q22
+ANSWER=
+
+QUESTION 15: q27
+ANSWER=
+
+QUESTION 16: The number of practice reviews that CS4472 will have this
+semester is ANSWER
+ANSWER=
+
+QUESTION 17: q25
+ANSWER=
+
+QUESTION 18: An important concept we will look at related to the question
+of when has one done enough testing is ANSWER
+ANSWER=
+
+QUESTION 19: Testing is generally about finding errors that have already
+been made. This course also covers the topic of ANSWER, which is about
+trying to prevent errors from being made in the first place.
+ANSWER=
+
+QUESTION 20: The per cent of the total mark allocated for all the quizzes
+is ANSWER
+ANSWER=
+
+QUESTION 21: q24
+ANSWER=
+
+QUESTION 22: To illustrate the relation between testing and software
+design, we will look at the programming technique ANSWER
+ANSWER=
+
+QUESTION 23: It is easy to make up test inputs, but it can be tricky to
+know what the right output for a given input should be. This is refered
+to as the ANSWER problem
+ANSWER=
+
+QUESTION 24: q21
+ANSWER=
+
+QUESTION 25: The per cent of the total mark allocated for all the quizzes
+is ANSWER
+ANSWER=
+
+QUESTION 26: The first tool for checking code quality for programs
+written in Ruby is ANSWER, which is described as a code smell detector.
+ANSWER=
+
+QUESTION 27: q26
+ANSWER=
+
+QUESTION 28: A common piece of information for people interested in
+programmer productivity is ANSWER
+ANSWER=
+
+QUESTION 29: The total amount of practice time you can get credit for
+during a practice week is ANSWER
+ANSWER=
+
+QUESTION 30: The per cent of the total mark allocated for all the weekly
+practices is ANSWER
+ANSWER=
+
+QUESTION 31: The first testing framework for Ruby that we are looking at
+is called ANSWER
+ANSWER=
+
+exam_database_file= examdatabase.json
+exam_format= plain
+dump_database= false
+line_width= 72
+question_count= 173
+create_exam= false
+answer_key= true
+sample_seed= 222
+shuffle_seed= 2345
+["C1", "C2", "C3"]
+["C1", "C2", "C3"]
+---------------
+
+ANSWER 1= 30 minutes
+
+ANSWER 2= a23
+
+ANSWER 3= encode knowledge
+
+ANSWER 4= 10
+
+ANSWER 5= 49
+
+ANSWER 6= Personal Software Process
+
+ANSWER 7= a30
+
+ANSWER 8= you need data about your past programming
+
+ANSWER 9= 3
+
+ANSWER 10= a20
+
+ANSWER 11= a28
+
+ANSWER 12= a23
+
+ANSWER 13= record a note about your practice progress
+
+ANSWER 14= a22
+
+ANSWER 15= a27
+
+ANSWER 16= 4
+
+ANSWER 17= a25
+
+ANSWER 18= coverage
+ANSWER 18= mutation
+
+ANSWER 19= quality assurance
+
+ANSWER 20= 21
+
+ANSWER 21= a24
+
+ANSWER 22= test driven development
+
+ANSWER 23= Oracle
+
+ANSWER 24= a21
+
+ANSWER 25= 21
+
+ANSWER 26= reek
+
+ANSWER 27= a26
+
+ANSWER 28= time spent
+ANSWER 28= number of lines of code written
+ANSWER 28= number of defects found
+
+ANSWER 29= 3 hours
+
+ANSWER 30= 30
+
+ANSWER 31= minitest
