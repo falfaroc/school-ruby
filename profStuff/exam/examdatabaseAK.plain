@@ -26,121 +26,111 @@ REMINDERS:
    your jacket or knapsack once the exam has started, raise your hand
    and wait til a proctor comes to you to oversee the matter.
 
-QUESTION 1: The protocols for practice expect that the longest amount of
-time that you will practice before recording a note is ANSWER
-ANSWER=
-
-QUESTION 2: q29
-ANSWER=
-
-QUESTION 3: Although we often think of programs as taking inputs and
-producing outputs, a higher level view of what is going on is to think of
-the programs as ANSWER about how to take inputs and produce outputs.
-ANSWER=
-
-QUESTION 4: The number of weekly practices that CS4472 will have this
-semester is ANSWER
-ANSWER=
-
-QUESTION 5: The per cent of the total mark allocated for all the practice
-reviews is ANSWER
-ANSWER=
-
-QUESTION 6: The practice technique advocated in this class is a
-modification of the ANSWER
-ANSWER=
-
-QUESTION 7: q30
-ANSWER=
-
-QUESTION 8: A main theme behind the practice technique advocated in this
-class is that in order to improve your programming, ANSWER
-ANSWER=
-
-QUESTION 9: The number of quizzes CS4472 will have this semester is
-ANSWER
-ANSWER=
-
-QUESTION 10: q20
-ANSWER=
-
-QUESTION 11: q28
-ANSWER=
-
-QUESTION 12: q23
-ANSWER=
-
-QUESTION 13: The scripts that were designed to aid the practice process
-assume that you will be uploading a copy of your work to BitBucket every
-time you ANSWER
-ANSWER=
-
-QUESTION 14: q22
-ANSWER=
-
-QUESTION 15: q27
-ANSWER=
-
-QUESTION 16: The number of practice reviews that CS4472 will have this
-semester is ANSWER
-ANSWER=
-
-QUESTION 17: q25
-ANSWER=
-
-QUESTION 18: An important concept we will look at related to the question
-of when has one done enough testing is ANSWER
-ANSWER=
-
-QUESTION 19: Testing is generally about finding errors that have already
+QUESTION 1: Testing is generally about finding errors that have already
 been made. This course also covers the topic of ANSWER, which is about
 trying to prevent errors from being made in the first place.
 ANSWER=
 
-QUESTION 20: The per cent of the total mark allocated for all the quizzes
-is ANSWER
+QUESTION 2: The scripts that were designed to aid the practice process
+assume that you will be uploading a copy of your work to BitBucket every
+time you ANSWER
 ANSWER=
 
-QUESTION 21: q24
+QUESTION 3: The kind of testing we do to make sure that when we change a
+program we do not break something that used to work is called ANSWER
 ANSWER=
 
-QUESTION 22: To illustrate the relation between testing and software
-design, we will look at the programming technique ANSWER
+QUESTION 4: The per cent of the total mark allocated for all the practice
+reviews is ANSWER
 ANSWER=
 
-QUESTION 23: It is easy to make up test inputs, but it can be tricky to
+QUESTION 5: It is easy to make up test inputs, but it can be tricky to
 know what the right output for a given input should be. This is refered
 to as the ANSWER problem
 ANSWER=
 
-QUESTION 24: q21
+QUESTION 6: The number of quizzes CS4472 will have this semester is
+ANSWER
 ANSWER=
 
-QUESTION 25: The per cent of the total mark allocated for all the quizzes
+QUESTION 7: The per cent of the total mark allocated for all the quizzes
 is ANSWER
 ANSWER=
 
-QUESTION 26: The first tool for checking code quality for programs
-written in Ruby is ANSWER, which is described as a code smell detector.
+QUESTION 8: An important concept we will look at related to the question
+of when has one done enough testing is ANSWER
 ANSWER=
 
-QUESTION 27: q26
+QUESTION 9: To illustrate the relation between testing and software
+design, we will look at the programming technique ANSWER
 ANSWER=
 
-QUESTION 28: A common piece of information for people interested in
-programmer productivity is ANSWER
+QUESTION 10: The first testing framework for Ruby that we are looking at
+is called ANSWER
 ANSWER=
 
-QUESTION 29: The total amount of practice time you can get credit for
-during a practice week is ANSWER
+QUESTION 11: The protocols for practice expect that the longest amount of
+time that you will practice before recording a note is ANSWER
 ANSWER=
 
-QUESTION 30: The per cent of the total mark allocated for all the weekly
+QUESTION 12: The per cent of the total mark allocated for all the weekly
 practices is ANSWER
 ANSWER=
 
-QUESTION 31: The first testing framework for Ruby that we are looking at
-is called ANSWER
+QUESTION 13: The total amount of practice time you can get credit for
+during a practice week is ANSWER
+ANSWER=
+
+QUESTION 14: A main theme behind the practice technique advocated in this
+class is that in order to improve your programming, ANSWER
+ANSWER=
+
+QUESTION 15: The four phases of testing (according to Whittaker) are: 1)
+modeling the software environment, 2) selecting test cases, 3) running
+and checking test cases, and 4) ANSWER
+ANSWER=
+
+QUESTION 16: Using combinatorial testing, if I have 10 binary inputs, I
+only need to use ANSWER test cases (each a setting of each of the 10
+inputs) to expect to find 98 per cent of the errors in the program.
+ANSWER=
+
+QUESTION 17: Structural testing is another name for ANSWER
+ANSWER=
+
+QUESTION 18: The number of weekly practices that CS4472 will have this
+semester is ANSWER
+ANSWER=
+
+QUESTION 19: Although we often think of programs as taking inputs and
+producing outputs, a higher level view of what is going on is to think of
+the programs as ANSWER about how to take inputs and produce outputs.
+ANSWER=
+
+QUESTION 20: A common piece of information for people interested in
+programmer productivity to track is ANSWER
+ANSWER=
+
+QUESTION 21: The first tool for checking code quality for programs
+written in Ruby is ANSWER, which is described as a code smell detector.
+ANSWER=
+
+QUESTION 22: The testing technique called boundary value partition starts
+with the notion of breaking the space of inputs into ANSWER
+ANSWER=
+
+QUESTION 23: The ANSWER is a method developed by Watt S. Humphrey to help
+individuals improve their programming skills based on existing methods
+that had been developed to help organizations improve their product
+development capabilities.
+ANSWER=
+
+QUESTION 24: The practice technique advocated in this class is a
+modification of the ANSWER
+ANSWER=
+
+QUESTION 25: The number of practice reviews that CS4472 will have this
+semester is ANSWER
 ANSWER=
 
 exam_database_file= examdatabase.json
@@ -156,67 +146,56 @@ shuffle_seed= 2345
 ["C1", "C2", "C3"]
 ---------------
 
-ANSWER 1= 30 minutes
+ANSWER 1= quality assurance
 
-ANSWER 2= a23
+ANSWER 2= record a note about your practice progress
 
-ANSWER 3= encode knowledge
+ANSWER 3= regression testing
 
-ANSWER 4= 10
+ANSWER 4= 49
 
-ANSWER 5= 49
+ANSWER 5= Oracle
 
-ANSWER 6= Personal Software Process
+ANSWER 6= 3
 
-ANSWER 7= a30
+ANSWER 7= 21
 
-ANSWER 8= you need data about your past programming
+ANSWER 8= coverage
+ANSWER 8= mutation
 
-ANSWER 9= 3
+ANSWER 9= test driven development
 
-ANSWER 10= a20
+ANSWER 10= minitest
 
-ANSWER 11= a28
+ANSWER 11= 30 minutes
 
-ANSWER 12= a23
+ANSWER 12= 30
 
-ANSWER 13= record a note about your practice progress
+ANSWER 13= 3 hours
 
-ANSWER 14= a22
+ANSWER 14= you need data about your past programming
 
-ANSWER 15= a27
+ANSWER 15= checking how well the testing is going
 
-ANSWER 16= 4
+ANSWER 16= 13
 
-ANSWER 17= a25
+ANSWER 17= code-based testing
+ANSWER 17= white-box testing
 
-ANSWER 18= coverage
-ANSWER 18= mutation
+ANSWER 18= 10
 
-ANSWER 19= quality assurance
+ANSWER 19= encode knowledge
 
-ANSWER 20= 21
+ANSWER 20= time spent
+ANSWER 20= number of lines of code written
+ANSWER 20= number of defects found
 
-ANSWER 21= a24
+ANSWER 21= reek
 
-ANSWER 22= test driven development
+ANSWER 22= regions of interest
 
-ANSWER 23= Oracle
+ANSWER 23= Personal Software Process
 
-ANSWER 24= a21
+ANSWER 24= Personal Software Process
 
-ANSWER 25= 21
-
-ANSWER 26= reek
-
-ANSWER 27= a26
-
-ANSWER 28= time spent
-ANSWER 28= number of lines of code written
-ANSWER 28= number of defects found
-
-ANSWER 29= 3 hours
-
-ANSWER 30= 30
-
-ANSWER 31= minitest
+ANSWER 25= 4

@@ -7,7 +7,7 @@ else
   exit 1;
 fi
 cd $project
-git config --global core.editor "/usr/bin/emacs"
+~/bin/set_editor
 date > .update-${project}
 git add .
 git commit

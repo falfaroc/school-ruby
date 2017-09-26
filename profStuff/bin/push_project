@@ -10,7 +10,7 @@ repo=$1_repo
 cd $project
 date > .update-${username}
 
-git config --global core.editor "/usr/bin/emacs"
+~/bin/set_editor
 git config --global push.default simple
 
 git add --all

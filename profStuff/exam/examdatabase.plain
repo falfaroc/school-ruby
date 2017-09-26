@@ -69,79 +69,70 @@ QUESTION 10: The per cent of the total mark allocated for all the quizzes
 is ANSWER
 ANSWER= 21
 
-QUESTION 11: The per cent of the total mark allocated for all the quizzes
-is ANSWER
-ANSWER= 21
-
-QUESTION 12: The per cent of the total mark allocated for all the weekly
+QUESTION 11: The per cent of the total mark allocated for all the weekly
 practices is ANSWER
 ANSWER= 30
 
-QUESTION 13: The per cent of the total mark allocated for all the
+QUESTION 12: The per cent of the total mark allocated for all the
 practice reviews is ANSWER
 ANSWER= 49
 
-QUESTION 14: The practice technique advocated in this class is a
+QUESTION 13: The practice technique advocated in this class is a
 modification of the ANSWER
 ANSWER= Personal Software Process
 
-QUESTION 15: A main theme behind the practice technique advocated in this
+QUESTION 14: A main theme behind the practice technique advocated in this
 class is that in order to improve your programming, ANSWER
 ANSWER= you need data about your past programming
 
-QUESTION 16: A common piece of information for people interested in
-programmer productivity is ANSWER
+QUESTION 15: A common piece of information for people interested in
+programmer productivity to track is ANSWER
 ANSWER= time spent
 ANSWER= number of lines of code written
 ANSWER= number of defects found
 
-QUESTION 17: Although we often think of programs as taking inputs and
+QUESTION 16: Although we often think of programs as taking inputs and
 producing outputs, a higher level view of what is going on is to think of
 the programs as ANSWER about how to take inputs and produce outputs.
 ANSWER= encode knowledge
 
-QUESTION 18: The scripts that were designed to aid the practice process
+QUESTION 17: The scripts that were designed to aid the practice process
 assume that you will be uploading a copy of your work to BitBucket every
 time you ANSWER
 ANSWER= record a note about your practice progress
 
-QUESTION 19: The protocols for practice expect that the longest amount of
+QUESTION 18: The protocols for practice expect that the longest amount of
 time that you will practice before recording a note is ANSWER
 ANSWER= 30 minutes
 
-QUESTION 20: The total amount of practice time you can get credit for
+QUESTION 19: The total amount of practice time you can get credit for
 during a practice week is ANSWER
 ANSWER= 3 hours
 
-QUESTION 21: q20
-ANSWER= a20
+QUESTION 20: The four phases of testing (according to Whittaker) are: 1)
+modeling the software environment, 2) selecting test cases, 3) running
+and checking test cases, and 4) ANSWER
+ANSWER= checking how well the testing is going
 
-QUESTION 22: q21
-ANSWER= a21
+QUESTION 21: The testing technique called boundary value partition starts
+with the notion of breaking the space of inputs into ANSWER
+ANSWER= regions of interest
 
-QUESTION 23: q22
-ANSWER= a22
+QUESTION 22: Structural testing is another name for ANSWER
+ANSWER= code-based testing
+ANSWER= white-box testing
 
-QUESTION 24: q23
-ANSWER= a23
+QUESTION 23: The kind of testing we do to make sure that when we change a
+program we do not break something that used to work is called ANSWER
+ANSWER= regression testing
 
-QUESTION 25: q24
-ANSWER= a24
+QUESTION 24: Using combinatorial testing, if I have 10 binary inputs, I
+only need to use ANSWER test cases (each a setting of each of the 10
+inputs) to expect to find 98 per cent of the errors in the program.
+ANSWER= 13
 
-QUESTION 26: q25
-ANSWER= a25
-
-QUESTION 27: q26
-ANSWER= a26
-
-QUESTION 28: q27
-ANSWER= a27
-
-QUESTION 29: q28
-ANSWER= a28
-
-QUESTION 30: q29
-ANSWER= a23
-
-QUESTION 31: q30
-ANSWER= a30
+QUESTION 25: The ANSWER is a method developed by Watt S. Humphrey to help
+individuals improve their programming skills based on existing methods
+that had been developed to help organizations improve their product
+development capabilities.
+ANSWER= Personal Software Process

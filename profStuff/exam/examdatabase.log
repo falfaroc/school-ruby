@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2017.9.10)  24 SEP 2017 20:59
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2017.9.10)  26 SEP 2017 15:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -148,7 +148,7 @@ File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 24.
- [2] [3] [4]
+ [2] [3]
 This exam contains 0 questions with 0 parts, 0 subparts, and 0 subsubparts.
 (./examdatabase.aux) ) 
 Here is how much of TeX's memory you used:
@@ -158,14 +158,14 @@ Here is how much of TeX's memory you used:
  4692 multiletter control sequences out of 15000+600000
  3640 words of font info for 14 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 29i,9n,19p,422b,286s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 29i,9n,19p,422b,292s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
 s/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
 sy10.pfb>
-Output written on examdatabase.pdf (4 pages, 34151 bytes).
+Output written on examdatabase.pdf (3 pages, 34989 bytes).
 PDF statistics:
- 25 PDF objects out of 1000 (max. 8388607)
- 16 compressed objects within 1 object stream
+ 22 PDF objects out of 1000 (max. 8388607)
+ 14 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

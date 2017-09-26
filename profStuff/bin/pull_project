@@ -11,7 +11,7 @@ cd $project
 date > .update-${username}
 git add --all
 git commit -m "downloading from repo"
-git config --global core.editor "/usr/bin/emacs"
+~/bin/set_editor
 git remote add origin `cat ../${repo}`
 echo ignore message: fatal: remote origin already exists.
 echo `cat ../${repo}`

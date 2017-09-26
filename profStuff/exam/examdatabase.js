@@ -71,12 +71,6 @@ var examdatabase =
         "source": "C1"
      },
      {
-        "question": "The per cent of the total mark allocated for all the quizzes is ANSWER",
-        "answer": "21",
-        "note": "optional note",
-        "source": "C1"
-     },
-     {
         "question": "The per cent of the total mark allocated for all the weekly practices is ANSWER",
         "answer": "30",
         "note": "optional note",
@@ -101,7 +95,7 @@ var examdatabase =
         "source": "C2"
      },
      {
-        "question": "A common piece of information for people interested in programmer productivity is ANSWER",
+        "question": "A common piece of information for people interested in programmer productivity to track is ANSWER",
         "answer": ["time spent","number of lines of code written","number of defects found"],
         "note": "optional note",
         "source": "C2"
@@ -131,68 +125,38 @@ var examdatabase =
         "source": "C2"
      },
      {
-        "question": "q20",
-        "answer": "a20",
-        "note": "optional note",
-        "source": "C2"
-     },
-     {
-        "question": "q21",
-        "answer": "a21",
+        "question": "The four phases of testing (according to Whittaker) are: 1) modeling the software environment, 2) selecting test cases, 3) running and checking test cases, and 4) ANSWER",
+        "answer": "checking how well the testing is going",
         "note": "optional note",
         "source": "C3"
      },
      {
-        "question": "q22",
-        "answer": "a22",
+        "question": "The testing technique called boundary value partition starts with the notion of breaking the space of inputs into ANSWER",
+        "answer": "regions of interest",
         "note": "optional note",
         "source": "C3"
      },
      {
-        "question": "q23",
-        "answer": "a23",
+        "question": "Structural testing is another name for ANSWER",
+        "answer": ["code-based testing","white-box testing"],
         "note": "optional note",
         "source": "C3"
      },
      {
-        "question": "q24",
-        "answer": "a24",
+        "question": "The kind of testing we do to make sure that when we change a program we do not break something that used to work is called ANSWER",
+        "answer": "regression testing",
         "note": "optional note",
         "source": "C3"
      },
      {
-        "question": "q25",
-        "answer": "a25",
+        "question": "Using combinatorial testing, if I have 10 binary inputs, I only need to use ANSWER test cases (each a setting of each of the 10 inputs) to expect to find 98 per cent of the errors in the program.",
+        "answer": "13",
         "note": "optional note",
         "source": "C3"
      },
      {
-        "question": "q26",
-        "answer": "a26",
-        "note": "optional note",
-        "source": "C3"
-     },
-     {
-        "question": "q27",
-        "answer": "a27",
-        "note": "optional note",
-        "source": "C3"
-     },
-     {
-        "question": "q28",
-        "answer": "a28",
-        "note": "optional note",
-        "source": "C3"
-     },
-     {
-        "question": "q29",
-        "answer": "a23",
-        "note": "optional note",
-        "source": "C3"
-     },
-     {
-        "question": "q30",
-        "answer": "a30",
+        "question": "The ANSWER is a method developed by Watt S. Humphrey to help individuals improve their programming skills based on existing methods that had been developed to help organizations improve their product development capabilities.",
+        "answer": "Personal Software Process",
         "note": "optional note",
         "source": "C3"
      },
