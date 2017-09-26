@@ -1,0 +1,3 @@
+09-26-17; 1:00 PM - Step three, change class initialization
+09-26-17; 1:20 PM - Step four, create PrintMethod class
+09-26-17; 1:26 PM - Step five, create QuietPrintMethod class
