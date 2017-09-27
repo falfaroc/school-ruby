@@ -11,10 +11,14 @@ end
 class QuietPrintMethod
 	$start = Time.now
 	LOG = []
+	TIME_LOG = []
 
 	# :reek:UtilityFunction
 	def print_m(print_this)
 		LOG.push(print_this)
+		time = print_this.partition(" ").first
+
+		TIME_LOG.push(time)
 	end
 
 	# :reek:UncommunicativeMethodName
@@ -26,5 +30,14 @@ class QuietPrintMethod
 	# :reek:UtilityFunction
 	def log index
 		LOG.at(index)
+	end
+
+	def time_log(index)
+		time = TIME_LOG.at(index)
+		time.to_i
+	end
+
+	def number_of_messages
+		TIME_LOG.count
 	end
 end

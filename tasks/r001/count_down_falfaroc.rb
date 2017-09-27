@@ -23,7 +23,7 @@ class CountDown
 		$start = Time.now
 		wait_time.downto(1).each do |time_left|
 				sleep 1
-				$print_class.print_m(time_left.to_s + " seconds left") if (time_left % 60) == 0
+				$print_class.print_m(time_left.to_s + " seconds left") #if (time_left % 60) == 0
 		end
 		$finish = Time.now
 	end
