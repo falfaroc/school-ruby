@@ -30,9 +30,11 @@ shows less time has passed between two notes than the time on the second
 note indicates, the excess time will be ignored and it will be marked as
 poor recording practice.
 
-In the r001 directory, I have placed a copy of count_down, having 
-renamed it count_down.rb .  This task involves working with this
-program.
+In the r001 directory, I you need to copy profStuff/bin/count_down into
+the r001 directory with the new name of count_down.rb .  This task 
+involves working with this program in the r001 directory. [note: this is 
+an update from 27 Sept 2017 fixing a mixup in the original project 
+description]
 
 STEP ONE is to create a Minitest test for the code in count_down.rb 
 that checks to see if it takes 120 seconds to run.  Some useful references
