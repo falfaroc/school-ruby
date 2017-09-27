@@ -1,3 +1,6 @@
 09-26-17; 1:00 PM - Step three, change class initialization
 09-26-17; 1:20 PM - Step four, create PrintMethod class
 09-26-17; 1:26 PM - Step five, create QuietPrintMethod class
+09-26-17; 1:50 PM - Step six, create timeInterval method that outputs the time since first invocation
+09-26-17; 4:15 PM - Step seven, split the program into three different files
+09-26-17; 4:25 PM - Step eight, create a log array and check if correct data is in the array
