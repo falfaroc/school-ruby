@@ -1,0 +1,51 @@
+r002 is another `ruby task'.  In order to record practice on this task, you 
+will need to commit messages whose first line is:
+    RPT: r002 time
+where time is replaced by a numeric value less than or equal to 30 and
+corresponding to the amount of practice time (in minutes) you spent 
+since the last such commit on the task i001.  The body of the message will 
+tell how far you have gotten with the task so far and what problems, 
+if any, you are having completing the task.  Note that these commits 
+are not direct communications with the prof, but instead notes in your
+practice report which probably won't be read until the practice report is 
+marked.  By now you should be familiar with this routine and the various
+related wiki presentations, particularly
+  A Checklist for Week 2 and on's Practice
+and
+  On the marking of the first week of practice
+
+This particular task introduces us to the world of Ruby Katas.  These are
+short practice problems that Ruby programmers work over many times trying 
+to find the best way to solve.  The one that I am interested in in this
+task is called Checkout.  There is a description of it at:
+    http://codekata.com/kata/kata09-back-to-the-checkout/
+
+In the r002 directory, I need you to make copies of the checkout.rb and
+checkout_test.rb files described in
+    https://gist.github.com/matiasleidemer/17f73997750217804186
+checkout.rb is where you will build your Ruby implementation of the
+checkout Kata and checkout_test.rb will tell you how you are doing
+in terms of meeting the spec and reek will help you keep the code
+relatively free of technical debt https://en.wikipedia.org/wiki/Technical_debt
+
+When you first run checkout_test.rb, it will show two errors.  You want to 
+convert those errors to failures and then eliminate the failures.  Following
+our test driven development style, you want to make small changes to checkout.rb
+and then verify that you have made progress (by lowering the error count or 
+with 0 errors, lowering the failure count).  Each time you lower the count,
+you want to run reek on checkout.rb (we don't care about the code in 
+checkout_test.rb, which will remain untouched for this task) to make sure
+the code is still in good shape -- and if not, fix it before moving on.  You 
+should be able to satisfy the default reek requirements on the code you 
+are writing in checkout.rb (don't deactivate checks or change limits on 
+checks from the defaults).
+
+Depending on how you code, you may clear different tests at different points
+in the process, so there are not explicit steps for this process.  To indicate
+how far you are in your note (commits), use the number of errors and the
+number of failures, as in: I am at 0 errors, 10 failures working on the
+AAAB price test in test_totals ...
+
+Enjoy.
+
+
