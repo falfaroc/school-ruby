@@ -13,11 +13,12 @@ class Discount
         @value
     end
 
-    def calculate_discount quantity
+    def calculate_discount(quantity)
         quantity * @value
     end
 end
 
+# handles the normal prices
 class BasePrice
     attr_reader :discount
 
@@ -30,15 +31,17 @@ class BasePrice
         @base_price
     end
 
-    def get_discount_amount quantity
-        if @discount.get_amount == 0
+    def get_discount_amount(quantity)
+        amount_need = @discount.get_amount
+
+        if amount_need == 0
             0
         else
-            (quantity / @discount.get_amount).floor
+            (quantity / amount_need).floor
         end
     end
 
-    def get_discount_value quantity
+    def get_discount_value(quantity)
         @discount.calculate_discount(quantity)
     end
 end
@@ -59,20 +62,35 @@ class CheckOut
     end
     
     def total
-        @total = 0
+        checkout_total = 0
         @item.each do |key, value|
-            @total += calculate_item(key, value)
+            checkout_total += calculate_item(key, value)
         end
-        @total
+        checkout_total
     end
 
-    def scan item
+    def scan(item)
         @item[item] += 1
     end
 
     def calculate_item(item, value)
-        quantity = @rules[item].get_discount_amount(value) #calculate the discount quantity
-        val = @rules[item].get_discount_value(quantity) #calculate discount value
-        val += (value - (quantity * @rules[item].discount.get_amount)) * @rules[item].get_price
+        quantity = get_discount_quantity(item, value)
+        val = get_discount_value(item, quantity)
+        val += (value - (quantity * get_base_discount_amount(item))) * @rules[item].get_price
     end
+
+    #calculate the discount quantity
+    def get_discount_quantity(item, value)
+        @rules[item].get_discount_amount(value)
+    end
+
+    #calculate discount value
+    def get_discount_value(item, quantity)
+        @rules[item].get_discount_value(quantity)
+    end
+
+    def get_base_discount_amount(item)
+        @rules[item].discount.get_amount
+    end
+
 end
