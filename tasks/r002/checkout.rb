@@ -13,8 +13,8 @@ class Discount
         $value
     end
 
-    def calculate_discount
-        $amount * $value
+    def calculate_discount quantity
+        quantity * $value
     end
 end
 
@@ -34,19 +34,33 @@ RULES = {
 
 # Immitate a supermarket checkout system
 class CheckOut
-    $total = 0
+    attr_accessor :total
+
     def initialize(rules)
-        # print rules['A']['base'].to_s + "\n"
+        $total = 0
+
         $rules = rules
-        # print $rules['A']['discount'].get_amount.to_s
+        $item = Hash.new(0)
     end
     
     def total
-         $total
+        $item.each do |key, value|
+            print "KEY: " + key.to_s + " VALUE: " + value.to_s + "\n"
+            calculate_item(key, value)
+        end
+        # print "TOTAL IS: " + $total.to_s + "\n"
+        $total
     end
 
     def scan item
-        print "Scanning: " + item.to_s + "\n"
+        # print "Scanning: " + item.to_s + "\n"
+        $item[item] += 1
         $total += $rules[item]['base']
+    end
+
+    def calculate_item(item, value)
+        quantity = (value / $rules[item]['discount'].get_amount).floor
+
+        print "QUANTITY: " + quantity.to_s
     end
 end
