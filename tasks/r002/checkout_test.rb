@@ -11,9 +11,9 @@ class TestPrice < MiniTest::Test
   end
 
   def test_totals
-    assert_equal(  0, price(""))
-    assert_equal( 50, price("A"))
-    assert_equal( 80, price("AB"))
+    # assert_equal(  0, price(""))
+    # assert_equal( 50, price("A"))
+    # assert_equal( 80, price("AB"))
     # assert_equal(115, price("CDBA"))
 
     # assert_equal(100, price("AA"))
@@ -32,8 +32,8 @@ class TestPrice < MiniTest::Test
     co = CheckOut.new(RULES)
     assert_equal(  0, co.total)
     co.scan("A");  assert_equal( 50, co.total)
-    # co.scan("B");  assert_equal( 80, co.total)
-    # co.scan("A");  assert_equal(130, co.total)
+    co.scan("B");  assert_equal( 80, co.total)
+    co.scan("A");  assert_equal(130, co.total)
     # co.scan("A");  assert_equal(160, co.total)
     # co.scan("B");  assert_equal(175, co.total)
   end
