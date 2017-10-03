@@ -19,6 +19,8 @@ class Discount
 end
 
 class BasePrice
+    attr_reader :discount
+
     def initialize(price, discount)
         @base_price = price
         @discount = discount
@@ -52,34 +54,25 @@ RULES = {
 # Immitate a supermarket checkout system
 class CheckOut
     def initialize(rules)
-        $rules = rules
-        $item = Hash.new(0)
+        @rules = rules
+        @item = Hash.new(0)
     end
     
     def total
-        $total = 0
-        $item.each do |key, value|
-            # print "KEY: " + key.to_s + " VALUE: " + value.to_s + "\n"
-            $total += calculate_item(key, value)
-            print "TOTAL: " + $total.to_s + "\n"
+        @total = 0
+        @item.each do |key, value|
+            @total += calculate_item(key, value)
         end
-        # print "TOTAL IS: " + $total.to_s + "\n"
-        # print "ENDING\n"
-        $total
+        @total
     end
 
     def scan item
-        print "Scanning: " + item.to_s + "\n"
-        $item[item] += 1
-        # $total += $rules[item]['base']
+        @item[item] += 1
     end
 
     def calculate_item(item, value)
-        print "ITEM " + item.to_s + " COUNT: " + value.to_s + "\n"
-        quantity = $rules[item].get_discount_amount(value) #(value / $rules[item].get_discount.get_amount).floor
-        # print "DISCOUNT QUANTITY: " + $rules[item].get_discount.get_amount.to_s + "\n"
-        val = $rules[item].get_discount_value(quantity) #calculate discount value
-        print "DISCOUNT VAL: " + val.to_s + "\n"
-        val += (value - quantity) * $rules[item].get_price
+        quantity = @rules[item].get_discount_amount(value) #calculate the discount quantity
+        val = @rules[item].get_discount_value(quantity) #calculate discount value
+        val += (value - (quantity * @rules[item].discount.get_amount)) * @rules[item].get_price
     end
 end
