@@ -9,35 +9,35 @@ end
 
 # Use to silently print
 class QuietPrintMethod
-	$start = Time.now
-	LOG = []
-	TIME_LOG = []
+	def initialize
+		@time_log = []
+		@log = []
+		@start = Time.now
+	end
 
-	# :reek:UtilityFunction
 	def print_m(print_this)
-		LOG.push(print_this)
+		@log.push(print_this)
 		time = print_this.partition(" ").first
 
-		TIME_LOG.push(time)
+		@time_log.push(time)
 	end
 
 	# :reek:UncommunicativeMethodName
 	def timeInterval
 		finish = Time.now
-		print("Time passed since first invocation: " + (finish - $start).to_s + "\n")
+		print("Time passed since first invocation: " + (finish - @start).to_s + "\n")
 	end
 
-	# :reek:UtilityFunction
 	def log index
-		LOG.at(index)
+		@log.at(index)
 	end
 
 	def time_log(index)
-		time = TIME_LOG.at(index)
+		time = @time_log.at(index)
 		time.to_i
 	end
 
 	def number_of_messages
-		TIME_LOG.count
+		@time_log.count
 	end
 end
