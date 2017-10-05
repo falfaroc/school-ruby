@@ -1,0 +1,175 @@
+commit 59175f3f80f4c0c540edf8145b7f06acae65cc9a
+Author: Fernando Campos <fcampos@ztr.com>
+Date:   Fri Sep 22 14:11:47 2017 -0400
+
+    RPT:i001 30 minutes
+    
+    Installing Ruby and configuring BitBucket on Windows.
+    Also, testing transferring files.
+
+commit b8d206c5189448d3892d873d852aac910f5fdcda
+Author: Fernando Campos <falfaroc@uwo.ca>
+Date:   Fri Sep 22 14:56:48 2017 -0400
+
+    RPT: i002 25 minutes
+    
+    Installing gem and bundler on my Linux Box
+
+commit acc62bf6304625408ac314222ed409b7231bccfd
+Author: Fernando Enrique Alfaro Campos <falfaroc@uwo.ca>
+Date:   Mon Sep 25 22:43:21 2017 -0400
+
+    RPT: i002 15
+    
+    Install gem, bundler and Gemfile on Windows.
+
+commit 01548fa0ed71e476be8bca3fdc8f1fe4c476a445
+Author: Fernando Enrique Alfaro Campos <falfaroc@uwo.ca>
+Date:   Tue Sep 26 10:46:42 2017 -0400
+
+    RPT: r001 30
+    
+    Began by testing the magic_ball exampleto ensure that minitest works correctly.
+    After seeing minitest work, I moved count_down to this directory and began modifying
+    it to complete step one.
+    
+    Within the 30 minutes, I was able to complete Step one. Reading the different assertions
+    took a bit to figure out which assertion is best.
+
+commit b70ffe4471d53d2760e7f2b5601b5fa804142b9d
+Author: Fernando Enrique Alfaro Campos <falfaroc@uwo.ca>
+Date:   Tue Sep 26 11:32:50 2017 -0400
+
+    RPT: r001 30
+    
+    Completed Step two from the list. Installing reek on windows took a bit longer
+    because 'gem install reek' did not work so I had to go and download the
+    missing dependancies. After I had reek installed, figuring out the different errors
+    and looking up how to fix them took sometime.
+
+commit 87afe31ccb02bcac217bc44065ca3c30ed76b9e1
+Author: Fernando Enrique Alfaro Campos <falfaroc@uwo.ca>
+Date:   Tue Sep 26 13:37:54 2017 -0400
+
+    RPT: r001 30
+    
+    Complete steps three, four and five. Understanding the tasks is a bit
+    challenging, better clarity would be ideal.
+
+commit 44558e96c90fccf22b195e6ae9beb47453e9ecbe
+Author: Fernando Enrique Alfaro Campos <falfaroc@uwo.ca>
+Date:   Wed Sep 27 12:14:26 2017 -0400
+
+    RPT: r001 30
+    
+    Complete steps six, seven, eight. This consists of creating the timeInterval
+    method which throws an UncommunicativeMethodName warning by reek. Splitting
+    the one file to three different files and creating the log array.
+    
+    One issue that I kept dealing with is the warnings thrown by reek. Many
+    I can solve by reading the documentation but some are very ambiguous such as,
+    UtilityFunction.
+
+commit b367a79e231291612871ca715e5af98db5f6019c
+Author: Fernando Enrique Alfaro Campos <falfaroc@uwo.ca>
+Date:   Wed Sep 27 13:19:58 2017 -0400
+
+    RPT: r001 30
+    
+    Did not fully complete step 9. Created the new methods but not working
+    correctly. Running into assertion issues and bad comparison.
+    
+    Description of the task unclear. What does time_log return, time sent by
+    print or time calculated by Time.now? Also, messages seperated by 1 second
+    when 60 second intervals has been done in the past.
+
+commit 08cd945a6da582f4300619780a57d9dccf5f5bf4
+Author: Fernando Enrique Alfaro Campos <falfaroc@uwo.ca>
+Date:   Mon Oct 2 21:31:54 2017 -0400
+
+    RPT: r002 25
+    
+    Reading the requirements for r002. Setting up checkout.rb and checkout_test.rb.
+    Resolving the two errors so they are only warnings now. Running reek on checkout.rb
+    and ensuring that there is no code smell.
+    
+    Since we are not modifying checkout_test.rb, not resolving the code smell pointed
+    out by reek. Working on setting the rules.
+
+commit 03886073392a9f1ae9a8d04aa1e1bdd266292db3
+Author: Fernando Enrique Alfaro Campos <falfaroc@uwo.ca>
+Date:   Mon Oct 2 22:09:06 2017 -0400
+
+    RPT: r002 30
+    
+    Modified the hash table to be a nested hash table so it handles the
+    discounts differently. Created a Discount class for the specific
+    discount per item.
+    
+    Looking into why my totals variable does not reset on object initialization.
+    Next, modifying the totals calculation.
+
+commit d033a9aee61bf8c87965096bb18f51b866e807dd
+Author: Fernando Enrique Alfaro Campos <falfaroc@uwo.ca>
+Date:   Mon Oct 2 23:00:43 2017 -0400
+
+    RPT: r002 30
+    
+    Fixed the attribute issue between objects. Created a hash that will count
+    the number of each item inputted.
+    
+    Calculating the correct total value is next.
+    
+    Learning about hash and working with them took a bit of time.
+
+commit bd26e2feebf3d5fabdb63ac9ce2748b593990a6e
+Author: Fernando Enrique Alfaro Campos <falfaroc@uwo.ca>
+Date:   Tue Oct 3 10:25:15 2017 -0400
+
+    RPT: r002 30
+    
+    Solved why certain variables were being overwritten. Learned the difference
+    between global variables and instance variables. Modified the hash table
+    that keeps track of the BasePrice class and Discount class.
+    
+    Need to run reek on the modified code to ensure there is no code smell.
+    Fixing those will take sometime.
+
+commit ca6fe4efd8b1473881cdb81ca74951b2b8f0f33c
+Author: Fernando Enrique Alfaro Campos <falfaroc@uwo.ca>
+Date:   Tue Oct 3 10:50:03 2017 -0400
+
+    RPT: r002 20
+    
+    Modified program to pass all the test cases. Incorrect calculation being
+    done.
+    
+    Learned what attr_reader does and helps so that I do not have to implement
+    that function.
+    
+    Going to run reek and begin fixing the code smell throughout the program.
+
+commit 2ad3c3bfc5c23a55d880925201ae591623417ecf
+Author: Fernando Enrique Alfaro Campos <falfaroc@uwo.ca>
+Date:   Tue Oct 3 15:02:01 2017 -0400
+
+    RPT: r002 30
+    
+    Fixed all the warnings thrown by reek. Seperated the multiple method calls
+    into their own functions.
+    Basically, once the core logic was ironed out, all the test cases ran and
+    passed.
+    
+    Task is done, might continue to clean up code. Will work and try to finish
+    previous steps in r001.
+
+commit 65be36098f94482482aad4fd1bc58ed2a90f14f5
+Author: Fernando Enrique Alfaro Campos <falfaroc@uwo.ca>
+Date:   Wed Oct 4 21:31:05 2017 -0400
+
+    RPT: r001 26
+    
+    Modified the variables in the print class to be instance
+    variables and that fixed many of the incorrect value issues.
+    
+    No problems completing step 9 after fixing the statement above.
