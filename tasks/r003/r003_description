@@ -1,0 +1,62 @@
+r003 is another `ruby task'.  In order to record practice on this task, you 
+will need to commit messages whose first line is:
+    RPT: r003 time
+where time is replaced by a numeric value less than or equal to 30 and
+corresponding to the amount of practice time (in minutes) you spent 
+since the last such commit on the task r003.  The body of the message will 
+tell how far you have gotten with the task so far and what problems, 
+if any, you are having completing the task.  Note that these commits 
+are not direct communications with the prof, but instead notes in your
+practice report which probably won't be read until the practice report is 
+marked.  By now you should be familiar with this routine and the various
+related wiki presentations, particularly
+  A Checklist for Week 2 and on's Practice
+and
+  On the marking of the first week of practice
+
+This particular task introduces us to a different Ruby testing framework
+called RSpec.  If you look at the notes for the fifth class, you will see
+some introductory discussion of RSpec.  Another good source is the
+opening page at: http://rspec.info/
+which has a few short intro videos.
+
+This particular task takes the same Kata-based approach as r002, so
+you won't be writing RSpec, but instead running and coding TDD-style
+against them.  As with r002, you will be using reek each cycle to
+check on how your code smells and fix it when there is a problem
+according to reek.
+
+The source for RSpec files for some Kata problems is
+          https://github.com/eliotsykes/rspec-katas
+Note: the test data file is:
+   https://github.com/eliotsykes/rspec-katas/blob/master/justify-text/justify_spec.rb
+
+For doing this task, you would not be interested in the solution file
+   https://github.com/eliotsykes/rspec-katas/blob/master/justify-text/justify.rb
+(which doesn't pass reek anyway).  After you have worked the problem, you
+may find the provide solution of interest for purposes of compaison with
+your own work.
+
+In the r003 directory, I need you to make copies of the justify_spec.rb
+file and place it in the correct rspec directory structure so that you
+can test your solution which should also be in the r003 directory and 
+called justify.rb.
+
+Once you have the test framework in place, you want to start converting 
+errors to failures and then eliminate the failures (as in r002).  Following
+our test driven development style, you want to make small changes to justify.rb
+and then verify that you have made progress (by lowering the error count or 
+with 0 errors, lowering the failure count).  Each time you lower the count,
+you want to run reek on justify.rb (we don't care about the code in 
+justify_spec.rb, which will remain untouched for this task) to make sure
+the code is still in good shape -- and if not, fix it before moving on.  You 
+should be able to satisfy the default reek requirements on the code you 
+are writing in justify.rb (don't deactivate checks or change limits on 
+checks from the defaults).
+
+Depending on how you code, you may clear different tests at different points
+in the process, so there are not explicit steps for this process.  To indicate
+how far you are in your note (commits), use the number of errors and the
+number of failures, as in: I am at 0 errors, 10 failures working on ...
+
+Enjoy.
