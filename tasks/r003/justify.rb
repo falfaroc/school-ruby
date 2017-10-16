@@ -23,25 +23,28 @@ def justify(text, width)
     end
 
     final_justified << final_line
-    
+
     final_justified.join("\n")
 end
 
 def justify_line(line, width)
-    num_of_spaces = width - line.length
-    space_location = line.scan(' ').cycle
+    return line if length_and_space_check(line, width)
 
-    if space_location.none? || num_of_spaces == 0
-        return line
+    while @num_of_spaces > 0
+        @num_of_spaces -= 1
+        @space_location.next << ' '
     end
 
-    for i in 1..num_of_spaces do
-        space_location.next << ' '
-    end
-
-    space_location.rewind
+    @space_location.rewind
     
-    line.gsub(' ') { |space| space_location.next }
+    line.gsub(' ') { |space| @space_location.next }
+end
+
+def length_and_space_check(line, width)
+    @num_of_spaces = width - line.length
+    @space_location = line.scan(' ').cycle
+
+    return (@space_location.none? || @num_of_spaces == 0)
 end
 
 def assert_length(words, width)
