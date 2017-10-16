@@ -15,27 +15,33 @@ def justify(text, width)
     regex_exp = /(?<=\s|\A).{1,#{width}}(?=\s|\z)/
     
     lines = text.scan(regex_exp)
+    final_line = lines.pop
 
+    final_justified = []
     lines.each do |line|
-        justify_line(line, width)
+        final_justified << justify_line(line, width)
     end
 
-    lines.join("\n")
+    final_justified << final_line
+    
+    final_justified.join("\n")
 end
 
 def justify_line(line, width)
     num_of_spaces = width - line.length
     space_location = line.scan(' ').cycle
 
-    if space_location == nil || num_of_spaces == 0
+    if space_location.none? || num_of_spaces == 0
         return line
     end
 
-    # for i in 1..num_of_spaces do
-    #     space_location.next << ' '
-    # end
+    for i in 1..num_of_spaces do
+        space_location.next << ' '
+    end
+
+    space_location.rewind
     
-    # print space_location
+    line.gsub(' ') { |space| space_location.next }
 end
 
 def assert_length(words, width)
