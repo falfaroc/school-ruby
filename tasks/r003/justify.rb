@@ -10,6 +10,7 @@
 def justify_init(width)
     @final_justified = []
     @regex_exp = /(?<=\s|\A).{1,#{width}}(?=\s|\z)/
+    @too_long_regex = /\S{#{width}}/
 end
 
 def justify(text, width) 
@@ -61,8 +62,7 @@ def space_append()
 end
 
 def assert_length(words, width)
-    too_long_regex = /\S{#{width}}/
-    if words =~ too_long_regex
+    if @too_long_regex.match(words)
         raise "Cannot justify to width #{width} without word-splitting"
     end
 end
