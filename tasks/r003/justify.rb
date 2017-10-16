@@ -6,6 +6,7 @@
 # ?<= --> ensures match, but doesn't include them (lookbehind)
 # /s  --> any whitespace character
 # .   --> any character except newline
+
 def justify_init(width)
     @final_justified = []
     @regex_exp = /(?<=\s|\A).{1,#{width}}(?=\s|\z)/
@@ -15,17 +16,24 @@ def justify(text, width)
     return unless text
     justify_init(width)
     assert_length(text, width)
-    
+
+    final_justification(text,width)
+end
+
+def final_justification(text, width)
     lines = text.scan(@regex_exp)
     final_line = lines.pop
 
+    final_justified_append(lines, width)
+
+    @final_justified << final_line
+    @final_justified.join("\n")
+end
+
+def final_justified_append(lines, width)
     lines.each do |line|
         @final_justified << justify_line(line, width)
     end
-
-    @final_justified << final_line
-
-    @final_justified.join("\n")
 end
 
 def justify_line(line, width)
