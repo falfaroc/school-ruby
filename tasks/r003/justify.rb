@@ -6,36 +6,32 @@
 # ?<= --> ensures match, but doesn't include them (lookbehind)
 # /s  --> any whitespace character
 # .   --> any character except newline
+def justify_init(width)
+    @final_justified = []
+    @regex_exp = /(?<=\s|\A).{1,#{width}}(?=\s|\z)/
+end
 
 def justify(text, width) 
     return unless text
-
+    justify_init(width)
     assert_length(text, width)
-
-    regex_exp = /(?<=\s|\A).{1,#{width}}(?=\s|\z)/
     
-    lines = text.scan(regex_exp)
+    lines = text.scan(@regex_exp)
     final_line = lines.pop
 
-    final_justified = []
     lines.each do |line|
-        final_justified << justify_line(line, width)
+        @final_justified << justify_line(line, width)
     end
 
-    final_justified << final_line
+    @final_justified << final_line
 
-    final_justified.join("\n")
+    @final_justified.join("\n")
 end
 
 def justify_line(line, width)
     return line if length_and_space_check(line, width)
 
-    while @num_of_spaces > 0
-        @num_of_spaces -= 1
-        @space_location.next << ' '
-    end
-
-    @space_location.rewind
+    space_append()
     
     line.gsub(' ') { |space| @space_location.next }
 end
@@ -45,6 +41,15 @@ def length_and_space_check(line, width)
     @space_location = line.scan(' ').cycle
 
     return (@space_location.none? || @num_of_spaces == 0)
+end
+
+def space_append()
+    while @num_of_spaces > 0
+        @num_of_spaces -= 1
+        @space_location.next << ' '
+    end
+
+    @space_location.rewind
 end
 
 def assert_length(words, width)
