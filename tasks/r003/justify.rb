@@ -1,4 +1,5 @@
 # Regex Help
+# https://ruby-doc.org/core-2.1.1/Regexp.html
 # \A  --> mathces beginning
 # \z  --> matches end
 # ?=  --> ensures the characters match, but doesn't include them (lookahead)
@@ -15,7 +16,26 @@ def justify(text, width)
     
     lines = text.scan(regex_exp)
 
-    print lines
+    lines.each do |line|
+        justify_line(line, width)
+    end
+
+    lines.join("\n")
+end
+
+def justify_line(line, width)
+    num_of_spaces = width - line.length
+    space_location = line.scan(' ').cycle
+
+    if space_location == nil || num_of_spaces == 0
+        return line
+    end
+
+    # for i in 1..num_of_spaces do
+    #     space_location.next << ' '
+    # end
+    
+    # print space_location
 end
 
 def assert_length(words, width)
