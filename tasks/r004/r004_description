@@ -1,0 +1,43 @@
+r004 is another `ruby task'.  In order to record practice on this task, you 
+will need to commit messages whose first line is:
+    RPT: r004 time
+where time is replaced by a numeric value less than or equal to 30 and
+corresponding to the amount of practice time (in minutes) you spent 
+since the last such commit on the task r004.  The body of the message will 
+tell how far you have gotten with the task so far and what problems, 
+if any, you are having completing the task.  Note that these commits 
+are not direct communications with the prof, but instead notes in your
+practice report which probably won't be read until the practice report is 
+marked.  By now you should be familiar with this routine and the various
+related wiki presentations, particularly
+  A Checklist for Week 2 and on's Practice
+and
+  On the marking of the first week of practice
+
+This particular task introduces us to simplecov, a package that tells you
+what lines of code are executed by your test cases.  A good source of
+information about simplecov is
+   https://github.com/colszowka/simplecov
+(simplecov is also a gem https://rubygems.org/gems/simplecov )
+also this blog entry
+   https://www.cakesolutions.net/teamblogs/brief-introduction-to-rspec-and-simplecov-for-ruby
+should be useful.  Note that after explaining how to set up rspec and simplecov,
+it then goes on to talk about Jenkins, which I don't expect to use this 
+semester.
+
+Step 1:  Download the tictactoe program at 
+            https://github.com/tinystride/ruby-tic-tac-toe
+which comes with its own rspec files.  Run rspec and fix error problem with spec
+files that results from them being old and rspec notation has updated slightly.
+
+Step 2: Add instrumentation so that simplecov
+runs, run the test suite and find the line of code not covered by the test
+suite.  Simplecov puts its results in an html file in the coverage subdirectory.
+
+Step 3:  Add test case to ttt_spec.rb so that when you run it the program
+passes and simplecov's report shows all lines of code have been executed.
+
+Step 4: Fix depreciation problems in ttt_spec.rb
+
+Step 5: Now you can start refactoring this code so that it continues to
+pass the test cases, but also gets a clean bill of health from reek.
