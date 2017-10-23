@@ -155,4 +155,9 @@ describe Scorer do
     expect(score.winner).to eq("no winner")
   end
 
+  it "should declare player2 as the winner if player2 wins" do
+    score = Scorer.new([2,2,2],[1,1,0],[1,0,0])
+    expect(score.winner).to eq("player2")
+  end
+
 end
