@@ -1,0 +1,37 @@
+r005 is another `ruby task'.  In order to record practice on this task, you 
+will need to commit messages whose first line is:
+    RPT: r005 time
+where time is replaced by a numeric value less than or equal to 30 and
+corresponding to the amount of practice time (in minutes) you spent 
+since the last such commit on the task r005.  The body of the message will 
+tell how far you have gotten with the task so far and what problems, 
+if any, you are having completing the task.  Note that these commits 
+are not direct communications with the prof, but instead notes in your
+practice report which probably won't be read until the practice report is 
+marked.  By now you should be familiar with this routine and the various
+related wiki presentations, particularly
+  A Checklist for Week 2 and on's Practice
+and
+  On the marking of the first week of practice
+
+This particular task uses rspec and simplecov which were introduced in
+r003 and r004, respectively.
+
+Step 1:  From https://github.com/eliotsykes/rspec-katas download
+the sudoku validator kata 
+   https://github.com/eliotsykes/rspec-katas/tree/master/sudoku-validator
+This has both rspec tests and sample solution.
+
+Step 2: Add instrumentation so that simplecov
+runs, run the test suite and find that nearly a third of the lines of code
+are not covered by the test suite.
+
+Step 3:  Add test case to sudoku_validator_spec.rb so that when you run it 
+the program passes and simplecov's report shows all lines of code have been 
+executed.
+
+Step 4: Now you can start refactoring this code so that it continues to
+pass the test cases, but also gets a clean bill of health from reek.
+Also keep an eye on coverage, adding test cases where necessary to cover
+new code written during the refactoring
+
