@@ -13,17 +13,17 @@ describe Game do
 
   it "should detect if user's chosen piece is on row1" do
     game = Game.new
-    expect(game.row1_chosen?(1)).to eq(true)
+    expect(game.row_one_chosen?(1)).to eq(true)
   end
 
   it "should detect if user's chosen piece is on row2" do
     game = Game.new
-    expect(game.row2_chosen?(5)).to eq(true)
+    expect(game.row_two_chosen?(5)).to eq(true)
   end
 
   it "should detect if user's chosen piece is on row3" do
     game = Game.new
-    expect(game.row3_chosen?(9)).to eq(true)
+    expect(game.row_three_chosen?(9)).to eq(true)
   end
 
   it "should properly locate an input of '1'" do
@@ -92,32 +92,32 @@ describe Scorer do
 
   it "should label the row 1" do
     score = Scorer.new([1,1,0],[0,2,0],[2,0,2])
-    expect(score.row1).to eq([1,1,0])
+    expect(score.row_one).to eq([1,1,0])
   end
 
   it "should label the row 2" do
     score = Scorer.new([1,1,0],[0,2,0],[2,0,2])
-    expect(score.row2).to eq([0,2,0])
+    expect(score.row_two).to eq([0,2,0])
   end
 
   it "should label the row 3" do
     score = Scorer.new([1,1,0],[0,2,0],[2,0,2])
-    expect(score.row3).to eq([2,0,2])
+    expect(score.row_three).to eq([2,0,2])
   end
 
   it "should label column 1" do
     score = Scorer.new([1,1,0],[0,2,0],[2,0,2])
-    expect(score.col1).to eq([1,0,2])
+    expect(score.col_one).to eq([1,0,2])
   end
 
   it "should label column 2" do
     score = Scorer.new([1,1,0],[0,2,0],[2,0,2])
-    expect(score.col2).to eq([1,2,0])
+    expect(score.col_two).to eq([1,2,0])
   end
 
   it "should label column 3" do
     score = Scorer.new([1,1,0],[0,2,0],[2,0,2])
-    expect(score.col3).to eq([0,0,2])
+    expect(score.col_three).to eq([0,0,2])
   end
 
   it "should label the left diagonal" do

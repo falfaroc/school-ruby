@@ -1,36 +1,37 @@
+# Tic-tac-toe game
 class Game
 
-  attr_accessor :current_score
+  attr_reader :current_score
 
   def initialize
     @current_score = [[0,0,0],[0,0,0],[0,0,0]]
   end
 
-  def row1_chosen?(piece)
+  def row_one_chosen?(piece)
     (piece / 3.0 <= 1)
   end
 
-  def row2_chosen?(piece)
+  def row_two_chosen?(piece)
     (piece / 3.0 <= 2)
   end
 
-  def row3_chosen?(piece)
+  def row_three_chosen?(piece)
     (piece / 3.0 <= 3)
   end
 
   def row_locator(piece)
     case
-      when row1_chosen?(piece) then 0
-      when row2_chosen?(piece) then 1
-      when row3_chosen?(piece) then 2
+      when row_one_chosen?(piece) then 0
+      when row_two_chosen?(piece) then 1
+      when row_three_chosen?(piece) then 2
     end
   end
 
   def column_locator(piece)
     case
-      when row1_chosen?(piece) then piece - 1
-      when row2_chosen?(piece) then piece - 4
-      when row3_chosen?(piece) then piece - 7
+      when row_one_chosen?(piece) then piece - 1
+      when row_two_chosen?(piece) then piece - 4
+      when row_three_chosen?(piece) then piece - 7
     end
   end
 
@@ -52,48 +53,50 @@ class Game
 
 end
 
+# Keeps track of score during
+# the tick-tac-toe game
 class Scorer < Game
 
-  attr_accessor :score
+  attr_reader :score
 
   def initialize(*score)
     @score = score
   end
 
-  def row1
+  def row_one
     score[0]
   end
 
-  def row2
+  def row_two
     score[1]
   end
 
-  def row3
+  def row_three
     score[2]
   end
 
-  def col1
-    [row1[0],row2[0],row3[0]]
+  def col_one
+    [row_one[0],row_two[0],row_three[0]]
   end
 
-  def col2
-    [row1[1],row2[1],row3[1]]
+  def col_two
+    [row_one[1],row_two[1],row_three[1]]
   end
 
-  def col3
-    [row1[2],row2[2],row3[2]]
+  def col_three
+    [row_one[2],row_two[2],row_three[2]]
   end
 
   def diag_left
-    [row1[0],row2[1],row3[2]]
+    [row_one[0],row_two[1],row_three[2]]
   end
 
   def diag_right
-    [row1[2],row2[1],row3[0]]
+    [row_one[2],row_two[1],row_three[0]]
   end
 
   def win_location
-    possible_wins = [row1, row2, row3, col1, col2, col3, diag_left, diag_right]
+    possible_wins = [row_one, row_two, row_three, col_one, col_two, col_three, diag_left, diag_right]
     possible_wins.detect do |location|
       unless location.include?(0)
         location if location.uniq.count == 1
