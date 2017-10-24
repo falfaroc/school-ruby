@@ -20,11 +20,11 @@ r003 and r004, respectively.
 Step 1:  From https://github.com/eliotsykes/rspec-katas download
 the sudoku validator kata 
    https://github.com/eliotsykes/rspec-katas/tree/master/sudoku-validator
-This has both rspec tests and sample solution.
+This has both rspec tests and sample solution. -- DONE
 
 Step 2: Add instrumentation so that simplecov
 runs, run the test suite and find that nearly a third of the lines of code
-are not covered by the test suite.
+are not covered by the test suite. -- DONE
 
 Step 3:  Add test case to sudoku_validator_spec.rb so that when you run it 
 the program passes and simplecov's report shows all lines of code have been 
