@@ -5,18 +5,21 @@ class Game
 
   def initialize
     @current_score = [[0,0,0],[0,0,0],[0,0,0]]
+    @r_one = 1
+    @r_two = 2
+    @r_three = 3
   end
 
   def row_one_chosen?(piece)
-    (piece / 3.0 <= 1)
+    (piece / 3.0 <= @r_one)
   end
 
   def row_two_chosen?(piece)
-    (piece / 3.0 <= 2)
+    (piece / 3.0 <= @r_two)
   end
 
   def row_three_chosen?(piece)
-    (piece / 3.0 <= 3)
+    (piece / 3.0 <= @r_three)
   end
 
   def row_locator(piece)
@@ -104,8 +107,9 @@ class Scorer < Game
     end
   end
 
+  # :reek:NilCheck
   def no_winner
-    win_location == nil
+    win_location.nil?
   end
 
   def winner
