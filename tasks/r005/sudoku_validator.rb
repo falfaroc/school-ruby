@@ -1,4 +1,7 @@
 require 'matrix'
+
+# Parent class for creating and verifying 
+# the Sudoku board
 module Sudoku
 
   def self.validate(grid)
@@ -11,6 +14,8 @@ module Sudoku
     board.solved_without_matrix?
   end
 
+  # Builds the sudoku board and solves
+  # it if possible
   class Board
 
     VALID_CHUNK = (1..9).to_a.freeze
@@ -20,43 +25,54 @@ module Sudoku
 
     def initialize(grid)
       @grid = grid
+      @columns = []
+      @matrix = []
+      @num_blocks = 0
+    end
+
+    def solved_init()
+      @columns = grid.transpose
+      @matrix = Matrix.rows(grid)
+      @num_blocks = grid.size
     end
 
     def solved?
-      return false unless grid
+      return false unless @grid
 
-      rows = grid
-      columns = grid.transpose
-      blocks = build_blocks(grid)
+      solved_init()
 
-      (rows + columns + blocks).all? { |chunk| valid_chunk?(chunk) }
+      blocks = build_blocks()
+
+      (@grid + @columns + blocks).all? { |chunk| valid_chunk?(chunk) }
     end
 
     def solved_without_matrix?
       return false unless grid
 
-      rows = grid
-      columns = grid.transpose
       blocks = build_blocks_without_matrix(grid)
 
-      (rows + columns + blocks).all? { |chunk| valid_chunk?(chunk) }
+      (@grid + @columns + blocks).all? { |chunk| valid_chunk?(chunk) }
     end
 
     private
 
 
-    def build_blocks(grid)
-      matrix = Matrix.rows(grid)
-      num_blocks = grid.size
+    def build_blocks()
+      # matrix = Matrix.rows(@grid)
+      # num_blocks = @grid.size
       blocks = []
 
-      (0...num_blocks).step(BLOCK_SIZE).each do |start_row|
-        (0...num_blocks).step(BLOCK_SIZE).each do |start_col|
-          num_rows = num_cols = BLOCK_SIZE
-          blocks << matrix.minor(start_row, num_rows, start_col, num_cols).to_a.flatten
-        end
+      (0...@num_blocks).step(BLOCK_SIZE).each do |start_row|
+        build_blocks_col(start_row, blocks)
       end
       blocks
+    end
+
+    def build_blocks_col(start_row, blocks)
+      (0...@num_blocks).step(BLOCK_SIZE).each do |start_col|
+          num_rows = num_cols = BLOCK_SIZE
+          blocks << @matrix.minor(start_row, num_rows, start_col, num_cols).to_a.flatten
+      end
     end
 
     def build_blocks_without_matrix(grid)

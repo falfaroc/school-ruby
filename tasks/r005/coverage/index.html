@@ -14,7 +14,7 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2017-10-23T22:15:32-04:00">2017-10-23T22:15:32-04:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2017-10-23T23:06:05-04:00">2017-10-23T23:06:05-04:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,15 +25,15 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         8.17
+         7.72
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>2</b> files in total.
-    <b>66</b> relevant lines. 
-    <span class="green"><b>66</b> lines covered</span> and
+    <b>70</b> relevant lines. 
+    <span class="green"><b>70</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -53,11 +53,11 @@
       <tr>
         <td class="strong"><a href="#2658e5e413532093ee0d38fbec801a6b10168cf5" class="src_link" title="sudoku_validator.rb">sudoku_validator.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>90</td>
-        <td>52</td>
-        <td>52</td>
+        <td>106</td>
+        <td>56</td>
+        <td>56</td>
         <td>0</td>
-        <td>10.1</td>
+        <td>9.4</td>
       </tr>
       
       <tr>
@@ -91,8 +91,8 @@
     <h3>sudoku_validator.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>52</b> relevant lines. 
-      <span class="green"><b>52</b> lines covered</span> and
+      <b>56</b> relevant lines. 
+      <span class="green"><b>56</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -106,112 +106,112 @@
           <code class="ruby">require &#39;matrix&#39;</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="2">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="2">
           
-          <code class="ruby">module Sudoku</code>
+          
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="3">
           
           
+          <code class="ruby"># Parent class for creating and verifying </code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="4">
+          
+          
+          <code class="ruby"># the Sudoku board</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="5">
+          <span class="hits">1</span>
+          
+          <code class="ruby">module Sudoku</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="6">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="4">
+        <li class="covered" data-hits="1" data-linenumber="7">
           <span class="hits">1</span>
           
           <code class="ruby">  def self.validate(grid)</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="5">
+        <li class="covered" data-hits="3" data-linenumber="8">
           <span class="hits">3</span>
           
           <code class="ruby">    board = Board.new(grid)</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="6">
+        <li class="covered" data-hits="3" data-linenumber="9">
           <span class="hits">3</span>
           
           <code class="ruby">    board.solved?</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="7">
+        <li class="never" data-hits="" data-linenumber="10">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="8">
+        <li class="never" data-hits="" data-linenumber="11">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="9">
+        <li class="covered" data-hits="1" data-linenumber="12">
           <span class="hits">1</span>
           
           <code class="ruby">  def self.validate_without_matrix(grid)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="10">
+        <li class="covered" data-hits="1" data-linenumber="13">
           <span class="hits">1</span>
           
           <code class="ruby">    board = Board.new(grid)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="11">
+        <li class="covered" data-hits="1" data-linenumber="14">
           <span class="hits">1</span>
           
           <code class="ruby">    board.solved_without_matrix?</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="12">
+        <li class="never" data-hits="" data-linenumber="15">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="13">
+        <li class="never" data-hits="" data-linenumber="16">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="14">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  class Board</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="15">
+        <li class="never" data-hits="" data-linenumber="17">
           
           
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="16">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    VALID_CHUNK = (1..9).to_a.freeze</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="17">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    BLOCK_SIZE = 3.freeze</code>
+          <code class="ruby">  # Builds the sudoku board and solves</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="18">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  # it if possible</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="19">
           <span class="hits">1</span>
           
-          <code class="ruby">    attr_reader :grid</code>
+          <code class="ruby">  class Board</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="20">
@@ -223,121 +223,121 @@
         <li class="covered" data-hits="1" data-linenumber="21">
           <span class="hits">1</span>
           
-          <code class="ruby">    def initialize(grid)</code>
+          <code class="ruby">    VALID_CHUNK = (1..9).to_a.freeze</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="22">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="1" data-linenumber="22">
+          <span class="hits">1</span>
           
-          <code class="ruby">      @grid = grid</code>
+          <code class="ruby">    BLOCK_SIZE = 3.freeze</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="23">
           
           
-          <code class="ruby">    end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="24">
-          
-          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="25">
+        <li class="covered" data-hits="1" data-linenumber="24">
           <span class="hits">1</span>
           
-          <code class="ruby">    def solved?</code>
+          <code class="ruby">    attr_reader :grid</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="26">
-          <span class="hits">3</span>
-          
-          <code class="ruby">      return false unless grid</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="27">
+        <li class="never" data-hits="" data-linenumber="25">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="28">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="1" data-linenumber="26">
+          <span class="hits">1</span>
           
-          <code class="ruby">      rows = grid</code>
+          <code class="ruby">    def initialize(grid)</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="29">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="4" data-linenumber="27">
+          <span class="hits">4</span>
           
-          <code class="ruby">      columns = grid.transpose</code>
+          <code class="ruby">      @grid = grid</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="30">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="4" data-linenumber="28">
+          <span class="hits">4</span>
           
-          <code class="ruby">      blocks = build_blocks(grid)</code>
+          <code class="ruby">      @columns = []</code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="29">
+          <span class="hits">4</span>
+          
+          <code class="ruby">      @matrix = []</code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="30">
+          <span class="hits">4</span>
+          
+          <code class="ruby">      @num_blocks = 0</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="31">
           
           
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="31" data-linenumber="32">
-          <span class="hits">31</span>
-          
-          <code class="ruby">      (rows + columns + blocks).all? { |chunk| valid_chunk?(chunk) }</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="33">
-          
-          
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="34">
+        <li class="never" data-hits="" data-linenumber="32">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="35">
+        <li class="covered" data-hits="1" data-linenumber="33">
           <span class="hits">1</span>
           
-          <code class="ruby">    def solved_without_matrix?</code>
+          <code class="ruby">    def solved_init()</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="36">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="34">
+          <span class="hits">2</span>
           
-          <code class="ruby">      return false unless grid</code>
+          <code class="ruby">      @columns = grid.transpose</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="35">
+          <span class="hits">2</span>
+          
+          <code class="ruby">      @matrix = Matrix.rows(grid)</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="36">
+          <span class="hits">2</span>
+          
+          <code class="ruby">      @num_blocks = grid.size</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="37">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">    end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="38">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="38">
           
-          <code class="ruby">      rows = grid</code>
+          
+          <code class="ruby"></code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="39">
           <span class="hits">1</span>
           
-          <code class="ruby">      columns = grid.transpose</code>
+          <code class="ruby">    def solved?</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="40">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="3" data-linenumber="40">
+          <span class="hits">3</span>
           
-          <code class="ruby">      blocks = build_blocks_without_matrix(grid)</code>
+          <code class="ruby">      return false unless @grid</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="41">
@@ -346,172 +346,172 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="28" data-linenumber="42">
-          <span class="hits">28</span>
+        <li class="covered" data-hits="2" data-linenumber="42">
+          <span class="hits">2</span>
           
-          <code class="ruby">      (rows + columns + blocks).all? { |chunk| valid_chunk?(chunk) }</code>
+          <code class="ruby">      solved_init()</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="43">
           
           
-          <code class="ruby">    end</code>
+          <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="44">
+        <li class="covered" data-hits="2" data-linenumber="44">
+          <span class="hits">2</span>
+          
+          <code class="ruby">      blocks = build_blocks()</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="45">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="45">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="31" data-linenumber="46">
+          <span class="hits">31</span>
           
-          <code class="ruby">    private</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="46">
-          
-          
-          <code class="ruby"></code>
+          <code class="ruby">      (@grid + @columns + blocks).all? { |chunk| valid_chunk?(chunk) }</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="47">
           
           
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="48">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="48">
+        <li class="covered" data-hits="1" data-linenumber="49">
           <span class="hits">1</span>
           
-          <code class="ruby">    def build_blocks(grid)</code>
+          <code class="ruby">    def solved_without_matrix?</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="49">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="1" data-linenumber="50">
+          <span class="hits">1</span>
           
-          <code class="ruby">      matrix = Matrix.rows(grid)</code>
+          <code class="ruby">      return false unless grid</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="50">
-          <span class="hits">2</span>
-          
-          <code class="ruby">      num_blocks = grid.size</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="51">
-          <span class="hits">2</span>
-          
-          <code class="ruby">      blocks = []</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="52">
+        <li class="never" data-hits="" data-linenumber="51">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="53">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="1" data-linenumber="52">
+          <span class="hits">1</span>
           
-          <code class="ruby">      (0...num_blocks).step(BLOCK_SIZE).each do |start_row|</code>
+          <code class="ruby">      blocks = build_blocks_without_matrix(grid)</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="54">
-          <span class="hits">6</span>
+        <li class="never" data-hits="" data-linenumber="53">
           
-          <code class="ruby">        (0...num_blocks).step(BLOCK_SIZE).each do |start_col|</code>
+          
+          <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="18" data-linenumber="55">
-          <span class="hits">18</span>
+        <li class="covered" data-hits="19" data-linenumber="54">
+          <span class="hits">19</span>
           
-          <code class="ruby">          num_rows = num_cols = BLOCK_SIZE</code>
+          <code class="ruby">      (@grid + @columns + blocks).all? { |chunk| valid_chunk?(chunk) }</code>
         </li>
       
-        <li class="covered" data-hits="18" data-linenumber="56">
-          <span class="hits">18</span>
-          
-          <code class="ruby">          blocks &lt;&lt; matrix.minor(start_row, num_rows, start_col, num_cols).to_a.flatten</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="57">
-          
-          
-          <code class="ruby">        end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="58">
-          
-          
-          <code class="ruby">      end</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="59">
-          <span class="hits">2</span>
-          
-          <code class="ruby">      blocks</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="60">
+        <li class="never" data-hits="" data-linenumber="55">
           
           
           <code class="ruby">    end</code>
         </li>
       
+        <li class="never" data-hits="" data-linenumber="56">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="57">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    private</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="58">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="59">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="60">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    def build_blocks()</code>
+        </li>
+      
         <li class="never" data-hits="" data-linenumber="61">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">      # matrix = Matrix.rows(@grid)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="62">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="62">
           
-          <code class="ruby">    def build_blocks_without_matrix(grid)</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="63">
-          <span class="hits">1</span>
           
-          <code class="ruby">      num_blocks = grid.size</code>
+          <code class="ruby">      # num_blocks = @grid.size</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="64">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="63">
+          <span class="hits">2</span>
           
-          <code class="ruby">      blocks_per_row = blocks_per_col = grid.size / BLOCK_SIZE</code>
+          <code class="ruby">      blocks = []</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="65">
+        <li class="never" data-hits="" data-linenumber="64">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="66">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="65">
+          <span class="hits">2</span>
           
-          <code class="ruby">      blocks = (0...num_blocks).map do |block_index|</code>
+          <code class="ruby">      (0...@num_blocks).step(BLOCK_SIZE).each do |start_row|</code>
         </li>
       
-        <li class="covered" data-hits="9" data-linenumber="67">
-          <span class="hits">9</span>
+        <li class="covered" data-hits="6" data-linenumber="66">
+          <span class="hits">6</span>
           
-          <code class="ruby">        block = []</code>
+          <code class="ruby">        build_blocks_col(start_row, blocks)</code>
         </li>
       
-        <li class="covered" data-hits="9" data-linenumber="68">
-          <span class="hits">9</span>
+        <li class="never" data-hits="" data-linenumber="67">
           
-          <code class="ruby">        row_offset = (block_index / blocks_per_row) * BLOCK_SIZE</code>
+          
+          <code class="ruby">      end</code>
         </li>
       
-        <li class="covered" data-hits="9" data-linenumber="69">
-          <span class="hits">9</span>
+        <li class="covered" data-hits="2" data-linenumber="68">
+          <span class="hits">2</span>
           
-          <code class="ruby">        col_offset = (block_index % blocks_per_col) * BLOCK_SIZE</code>
+          <code class="ruby">      blocks</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="69">
+          
+          
+          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="70">
@@ -520,64 +520,64 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="9" data-linenumber="71">
-          <span class="hits">9</span>
+        <li class="covered" data-hits="1" data-linenumber="71">
+          <span class="hits">1</span>
           
-          <code class="ruby">        (0...BLOCK_SIZE).each do |row_index|</code>
+          <code class="ruby">    def build_blocks_col(start_row, blocks)</code>
         </li>
       
-        <li class="covered" data-hits="27" data-linenumber="72">
-          <span class="hits">27</span>
+        <li class="covered" data-hits="6" data-linenumber="72">
+          <span class="hits">6</span>
           
-          <code class="ruby">          (0...BLOCK_SIZE).each do |col_index|</code>
+          <code class="ruby">      (0...@num_blocks).step(BLOCK_SIZE).each do |start_col|</code>
         </li>
       
-        <li class="covered" data-hits="81" data-linenumber="73">
-          <span class="hits">81</span>
+        <li class="covered" data-hits="18" data-linenumber="73">
+          <span class="hits">18</span>
           
-          <code class="ruby">            row = row_index+row_offset</code>
+          <code class="ruby">          num_rows = num_cols = BLOCK_SIZE</code>
         </li>
       
-        <li class="covered" data-hits="81" data-linenumber="74">
-          <span class="hits">81</span>
+        <li class="covered" data-hits="18" data-linenumber="74">
+          <span class="hits">18</span>
           
-          <code class="ruby">            col = col_index+col_offset</code>
+          <code class="ruby">          blocks &lt;&lt; @matrix.minor(start_row, num_rows, start_col, num_cols).to_a.flatten</code>
         </li>
       
-        <li class="covered" data-hits="81" data-linenumber="75">
-          <span class="hits">81</span>
+        <li class="never" data-hits="" data-linenumber="75">
           
-          <code class="ruby">            block &lt;&lt; grid[row][col]</code>
+          
+          <code class="ruby">      end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="76">
           
           
-          <code class="ruby">          end</code>
+          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="77">
           
           
-          <code class="ruby">        end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="78">
-          
-          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="9" data-linenumber="79">
-          <span class="hits">9</span>
+        <li class="covered" data-hits="1" data-linenumber="78">
+          <span class="hits">1</span>
           
-          <code class="ruby">        block</code>
+          <code class="ruby">    def build_blocks_without_matrix(grid)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="80">
+        <li class="covered" data-hits="1" data-linenumber="79">
+          <span class="hits">1</span>
           
+          <code class="ruby">      num_blocks = grid.size</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="80">
+          <span class="hits">1</span>
           
-          <code class="ruby">      end</code>
+          <code class="ruby">      blocks_per_row = blocks_per_col = grid.size / BLOCK_SIZE</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="81">
@@ -589,52 +589,148 @@
         <li class="covered" data-hits="1" data-linenumber="82">
           <span class="hits">1</span>
           
-          <code class="ruby">      blocks</code>
+          <code class="ruby">      blocks = (0...num_blocks).map do |block_index|</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="83">
+        <li class="covered" data-hits="9" data-linenumber="83">
+          <span class="hits">9</span>
           
-          
-          <code class="ruby">    end</code>
+          <code class="ruby">        block = []</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="84">
+        <li class="covered" data-hits="9" data-linenumber="84">
+          <span class="hits">9</span>
+          
+          <code class="ruby">        row_offset = (block_index / blocks_per_row) * BLOCK_SIZE</code>
+        </li>
+      
+        <li class="covered" data-hits="9" data-linenumber="85">
+          <span class="hits">9</span>
+          
+          <code class="ruby">        col_offset = (block_index % blocks_per_col) * BLOCK_SIZE</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="86">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="85">
+        <li class="covered" data-hits="9" data-linenumber="87">
+          <span class="hits">9</span>
+          
+          <code class="ruby">        (0...BLOCK_SIZE).each do |row_index|</code>
+        </li>
+      
+        <li class="covered" data-hits="27" data-linenumber="88">
+          <span class="hits">27</span>
+          
+          <code class="ruby">          (0...BLOCK_SIZE).each do |col_index|</code>
+        </li>
+      
+        <li class="covered" data-hits="81" data-linenumber="89">
+          <span class="hits">81</span>
+          
+          <code class="ruby">            row = row_index+row_offset</code>
+        </li>
+      
+        <li class="covered" data-hits="81" data-linenumber="90">
+          <span class="hits">81</span>
+          
+          <code class="ruby">            col = col_index+col_offset</code>
+        </li>
+      
+        <li class="covered" data-hits="81" data-linenumber="91">
+          <span class="hits">81</span>
+          
+          <code class="ruby">            block &lt;&lt; grid[row][col]</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="92">
+          
+          
+          <code class="ruby">          end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="93">
+          
+          
+          <code class="ruby">        end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="94">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="9" data-linenumber="95">
+          <span class="hits">9</span>
+          
+          <code class="ruby">        block</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="96">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="97">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="98">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      blocks</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="99">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="100">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="101">
           <span class="hits">1</span>
           
           <code class="ruby">    def valid_chunk?(chunk)</code>
         </li>
       
-        <li class="covered" data-hits="56" data-linenumber="86">
-          <span class="hits">56</span>
+        <li class="covered" data-hits="47" data-linenumber="102">
+          <span class="hits">47</span>
           
           <code class="ruby">      VALID_CHUNK == chunk.sort</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="87">
+        <li class="never" data-hits="" data-linenumber="103">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="88">
+        <li class="never" data-hits="" data-linenumber="104">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="89">
+        <li class="never" data-hits="" data-linenumber="105">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="90">
+        <li class="never" data-hits="" data-linenumber="106">
           
           
           <code class="ruby">end</code>
