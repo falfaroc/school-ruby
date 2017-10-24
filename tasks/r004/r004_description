@@ -25,19 +25,19 @@ should be useful.  Note that after explaining how to set up rspec and simplecov,
 it then goes on to talk about Jenkins, which I don't expect to use this 
 semester.
 
-Step 1:  Download the tictactoe program at -- DONE
+Step 1:  Download the tictactoe program at 
             https://github.com/tinystride/ruby-tic-tac-toe
 which comes with its own rspec files.  Run rspec and fix error problem with spec
 files that results from them being old and rspec notation has updated slightly.
 
-Step 2: Add instrumentation so that simplecov -- DONE
+Step 2: Add instrumentation so that simplecov
 runs, run the test suite and find the line of code not covered by the test
 suite.  Simplecov puts its results in an html file in the coverage subdirectory.
 
-Step 3:  Add test case to ttt_spec.rb so that when you run it the program -- DONE
+Step 3:  Add test case to ttt_spec.rb so that when you run it the program
 passes and simplecov's report shows all lines of code have been executed.
 
-Step 4: Fix depreciation problems in ttt_spec.rb -- DONE
+Step 4: Fix depreciation problems in ttt_spec.rb
 
 Step 5: Now you can start refactoring this code so that it continues to
 pass the test cases, but also gets a clean bill of health from reek.
