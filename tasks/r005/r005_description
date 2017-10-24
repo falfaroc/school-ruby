@@ -28,7 +28,7 @@ are not covered by the test suite. -- DONE
 
 Step 3:  Add test case to sudoku_validator_spec.rb so that when you run it 
 the program passes and simplecov's report shows all lines of code have been 
-executed.
+executed. -- DONE
 
 Step 4: Now you can start refactoring this code so that it continues to
 pass the test cases, but also gets a clean bill of health from reek.

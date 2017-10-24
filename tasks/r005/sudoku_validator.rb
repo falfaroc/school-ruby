@@ -6,6 +6,11 @@ module Sudoku
     board.solved?
   end
 
+  def self.validate_without_matrix(grid)
+    board = Board.new(grid)
+    board.solved_without_matrix?
+  end
+
   class Board
 
     VALID_CHUNK = (1..9).to_a.freeze
@@ -23,6 +28,16 @@ module Sudoku
       rows = grid
       columns = grid.transpose
       blocks = build_blocks(grid)
+
+      (rows + columns + blocks).all? { |chunk| valid_chunk?(chunk) }
+    end
+
+    def solved_without_matrix?
+      return false unless grid
+
+      rows = grid
+      columns = grid.transpose
+      blocks = build_blocks_without_matrix(grid)
 
       (rows + columns + blocks).all? { |chunk| valid_chunk?(chunk) }
     end
