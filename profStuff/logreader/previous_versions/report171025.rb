@@ -1,3 +1,6 @@
+# Contains error.  When last commit in log is an RPT: commit, it doesn't appear
+# in the rpt_report output.
+
 require 'forwardable'
 
 # class for handling RPT: related methods for a commit without an RPT:
@@ -265,11 +268,13 @@ class ParseInput
    def parse
       @input.each_line do | line |
           if line.start_with? "commit " 
+             @commit_list.last.finish_body if @commit_list.length > 0
              @commit_list.push Commit.new line, "", "", []
           else
              process_after_commit_line line
           end
       end
+
       @commit_list
    end
 
@@ -299,13 +304,6 @@ class Commits
    def initialize(config, input)
       @config = config
       @commits = ParseInput.new(input).parse
-      update_rpts
-   end
-
-   def update_rpts
-      @commits.each do | commit |
-         commit.finish_body
-      end
    end
 
    def print
