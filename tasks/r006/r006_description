@@ -1,0 +1,72 @@
+r006 is another `ruby task'.  In order to record practice on this task, you 
+will need to commit messages whose first line is:
+    RPT: r006 time
+where time is replaced by a numeric value less than or equal to 30 and
+corresponding to the amount of practice time (in minutes) you spent 
+since the last such commit on the task r006.  The body of the message will 
+tell how far you have gotten with the task so far and what problems, 
+if any, you are having completing the task.  Note that these commits 
+are not direct communications with the prof, but instead notes in your
+practice report which probably won't be read until the practice report is 
+marked.  By now you should be familiar with this routine and the various
+related wiki presentations, particularly
+  A Checklist for Week 2 and on's Practice
+and
+  On the marking of the first week of practice
+
+This particular task uses rspec and simplecov which were introduced in
+r003 and r004, respectively.
+
+Step 1:  From 
+   https://gist.github.com/jithinabraham/f23652a8bc6ae6e7a6c31f5680da6bc8
+cut and past heap_sort.rb, which has the ruby source of a class HeapSort.
+
+
+Step 2: Add instrumentation so that you can run simplecov and rspec with it
+to verify that HeapSort.new([3, 2, 1]).heap_sort returns [1, 2, 3]
+
+Step 3: Create more tests so that simplecov shows 100% coverage of HeapSort.
+
+Step 4: Refactor heap_sort.rb so that reek is happy with it while checking
+that your tests pass and that you still have 100% coverage according to
+simplecov (adding new tests as necessary).
+
+Step 5: Of course the interesting thing about heapsort is how fast it is.
+What I would like to know is does this implementation have a performance
+bug or do I have a real n log n sort here.  One way to do this would be
+to count the number of `array accesses'.  This should be done without
+changing the code of HeapSort at all.  One way is as follows.
+
+Looking at the code, it looks like input is an array, but really input is
+just an instance of some class that supports the length, [], and []= methods.
+So, I can do a performance check by creating a class ArrayWatcher that 
+supports the following five methods:
+  initialize: takes an `array' and stores it in an instance variable and
+              sets a count instance variable to 0
+  length: returns length of the stored array
+  []: returns the value stored at the indicated location in the stored array
+      and increments the counter.
+  []=: sets the value of the stored array at the indicated location in the
+       first parameter to the value in the second parameter, and increments
+       counter.
+  count: return value of internal counter.
+This is another situation where Ruby syntax is flexible, letting you define
+[](a) and []=(a,b) and then use them as [a] and [a]=b , respectively.
+
+With this, we can write a simple bit of code that tries larger and larger
+arrays or random values until it finds the size array such that the number
+of array accesses is less than n * sqrt(n) where n is the size of the array
+being sorted.  This gives us some indication that it is probably an efficient
+sort.
+
+Step 6:  If you have not already done so, add a set of tests that cover
+the class ArrayWatcher seperately.  Note these can be run in isolation by
+using rspec's tag feature described in
+  https://stackoverflow.com/questions/5069677/how-do-i-run-only-specific-tests-in-rspec
+
+Step 7: Can you do better than this?  That is set up a collection of tests
+that not only show that it is O (n * log n) but what the bounding value k is
+such that the number of accesses is less than or equal to k * (n * log n)
+(the definition of big-O notation 
+      https://en.wikipedia.org/wiki/Big_O_notation 
+).
