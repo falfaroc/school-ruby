@@ -39,15 +39,22 @@ class HeapSort
 		root_length = root_end()
 		while root_length <= the_end
 			swap = swap_rearrange(swap, root_length, the_end)
-			
-			if swap!=@root
-				input[@root],input[swap]=input[swap],input[@root]
-				@root=swap
-			else
-				return
+
+			if !root_swap_compare(swap)
+				return 
 			end
+			
 			root_length = root_end()	
 		end
+	end
+
+	def root_swap_compare(swap)
+		if swap!=@root
+			input[@root],input[swap]=input[swap],input[@root]
+			@root=swap
+			return true
+		end
+		return false
 	end
 
 	def swap_rearrange(swap, root_length, the_end)
