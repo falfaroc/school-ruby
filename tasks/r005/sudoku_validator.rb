@@ -47,9 +47,9 @@ module Sudoku
     end
 
     def solved_without_matrix?
-      return false unless grid
+      return false unless @grid
 
-      blocks = build_blocks_without_matrix(grid)
+      blocks = build_blocks_without_matrix()
 
       (@grid + @columns + blocks).all? { |chunk| valid_chunk?(chunk) }
     end
@@ -58,8 +58,6 @@ module Sudoku
 
 
     def build_blocks()
-      # matrix = Matrix.rows(@grid)
-      # num_blocks = @grid.size
       blocks = []
 
       (0...@num_blocks).step(BLOCK_SIZE).each do |start_row|
@@ -75,27 +73,57 @@ module Sudoku
       end
     end
 
-    def build_blocks_without_matrix(grid)
-      num_blocks = grid.size
-      blocks_per_row = blocks_per_col = grid.size / BLOCK_SIZE
+    def build_blocks_without_matrix()
+      num_blocks = @grid.size
+      blocks_per_row = blocks_per_col = num_blocks / BLOCK_SIZE
 
       blocks = (0...num_blocks).map do |block_index|
-        block = []
-        row_offset = (block_index / blocks_per_row) * BLOCK_SIZE
-        col_offset = (block_index % blocks_per_col) * BLOCK_SIZE
+        blocks_map_traverse(blocks_per_row)
+        # block = []
+        
+        # row_offset = (block_index / blocks_per_row) * BLOCK_SIZE
+        # col_offset = (block_index % blocks_per_col) * BLOCK_SIZE
 
-        (0...BLOCK_SIZE).each do |row_index|
-          (0...BLOCK_SIZE).each do |col_index|
-            row = row_index+row_offset
-            col = col_index+col_offset
-            block << grid[row][col]
-          end
-        end
+        # (0...BLOCK_SIZE).each do |row_index|
+        #   build_blocks_without_matrix_col(row_index, row_offset, col_offset, block)
+        # end
 
-        block
+        #block
       end
 
       blocks
+    end
+
+    def row_offset_calc(block_index, blocks_per_row)
+      (block_index / blocks_per_row) * BLOCK_SIZE
+    end
+
+    def col_offset_calc(block_index, blocks_per_col)
+      (block_index % blocks_per_col) * BLOCK_SIZE
+    end
+
+    def blocks_map_traverse(blocks_per_row)
+      block = []
+
+      row_offset = row_offset_calc(block_index, blocks_per_row)
+      col_offset = col_offset_calc(block_index, blocks_per_col)
+      build_blocks_without_matrix_row(row_offset, col_offset, block)
+
+      block
+    end
+
+    def build_blocks_without_matrix_row(row_offset, col_offset, block)
+      (0...BLOCK_SIZE).each do |row_index|
+        build_blocks_without_matrix_col(row_index, row_offset, col_offset, block)
+      end
+    end
+
+    def build_blocks_without_matrix_col(row_index, row_offset, col_offset, block)
+      (0...BLOCK_SIZE).each do |col_index|
+        row = row_index+row_offset
+        col = col_index+col_offset
+        block << @grid[row][col]
+      end
     end
 
     def valid_chunk?(chunk)
