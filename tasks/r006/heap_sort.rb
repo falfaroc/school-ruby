@@ -1,3 +1,5 @@
+require_relative 'array_watcher.rb'
+
 # Takes an unsorted array and returns
 # a sorted array using the Heap sort 
 # algorithm
@@ -5,7 +7,7 @@ class HeapSort
 	attr_reader :input
 	
 	def initialize(arg)
-		@input=arg
+		@input=ArrayWatcher.new(arg)
 		@root = 0
 	end
 	
@@ -13,7 +15,8 @@ class HeapSort
 	  heapify
 	  the_end=input.length-1
 	  heap_sort_loop(the_end)
-	  input
+	#   puts ("# array access: " + input.get_count.to_s + ", n * sqrt(n): " + (input.length * Math.sqrt(input.length)).to_s)
+	  input.get_array()
 	end
 
 	def heap_sort_loop(the_end)

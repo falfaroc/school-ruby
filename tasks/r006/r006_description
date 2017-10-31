@@ -19,17 +19,17 @@ r003 and r004, respectively.
 
 Step 1:  From 
    https://gist.github.com/jithinabraham/f23652a8bc6ae6e7a6c31f5680da6bc8
-cut and past heap_sort.rb, which has the ruby source of a class HeapSort.
+cut and past heap_sort.rb, which has the ruby source of a class HeapSort. --DONE
 
 
 Step 2: Add instrumentation so that you can run simplecov and rspec with it
-to verify that HeapSort.new([3, 2, 1]).heap_sort returns [1, 2, 3]
+to verify that HeapSort.new([3, 2, 1]).heap_sort returns [1, 2, 3] --DONE
 
-Step 3: Create more tests so that simplecov shows 100% coverage of HeapSort.
+Step 3: Create more tests so that simplecov shows 100% coverage of HeapSort. --DONE
 
 Step 4: Refactor heap_sort.rb so that reek is happy with it while checking
 that your tests pass and that you still have 100% coverage according to
-simplecov (adding new tests as necessary).
+simplecov (adding new tests as necessary). --DONE
 
 Step 5: Of course the interesting thing about heapsort is how fast it is.
 What I would like to know is does this implementation have a performance
