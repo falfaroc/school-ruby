@@ -57,12 +57,12 @@ With this, we can write a simple bit of code that tries larger and larger
 arrays or random values until it finds the size array such that the number
 of array accesses is less than n * sqrt(n) where n is the size of the array
 being sorted.  This gives us some indication that it is probably an efficient
-sort.
+sort. - DONE
 
 Step 6:  If you have not already done so, add a set of tests that cover
 the class ArrayWatcher seperately.  Note these can be run in isolation by
 using rspec's tag feature described in
-  https://stackoverflow.com/questions/5069677/how-do-i-run-only-specific-tests-in-rspec
+  https://stackoverflow.com/questions/5069677/how-do-i-run-only-specific-tests-in-rspec --DONE
 
 Step 7: Can you do better than this?  That is set up a collection of tests
 that not only show that it is O (n * log n) but what the bounding value k is

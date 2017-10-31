@@ -15,4 +15,14 @@ describe HeapSort do
     heap = HeapSort.new([6, 1, 15, 3, 10, 7])
     expect(heap.heap_sort).to eq([1, 3, 6, 7, 10, 15])
   end
+
+  it "it creates an array to be watched", :focus => true do
+    arr = ArrayWatcher.new([[3, 2, 1]])
+  end
+
+  it "it access array and get accessor count", :focus => true do
+    arr = ArrayWatcher.new([[3, 2, 1]])
+    a = arr[1]
+    arr[1] = 4
+  end
 end

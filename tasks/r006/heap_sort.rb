@@ -15,7 +15,7 @@ class HeapSort
 	  heapify
 	  the_end=input.length-1
 	  heap_sort_loop(the_end)
-	#   puts ("# array access: " + input.get_count.to_s + ", n * sqrt(n): " + (input.length * Math.sqrt(input.length)).to_s)
+	  puts ("# array access: " + input.get_count.to_s + ", n * sqrt(n): " + input.length.to_s)
 	  input.get_array()
 	end
 
