@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2017.9.10)  26 SEP 2017 15:27
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.9.29)  30 OCT 2017 22:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -94,7 +94,7 @@ File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \FrameRule=\dimen104
 \FrameSep=\dimen105
 )
-(./examdatabaseAK.aux)
+No file examdatabaseAK.aux.
 \openout1 = `examdatabaseAK.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 2.
@@ -141,33 +141,44 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--14
 
 [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 96.
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]
+Overfull \hbox (9.24565pt too wide) in paragraph at lines 58--60
+[]\OT1/cmr/m/n/10 MicroTest (MiniTest sub-set)'s us-age pat-tern is for the tes
+t class to in-herit from Test so that Class.inherited
+ []
 
-(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+[3] [4] [5]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 168.
+
+ (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 96.
- [4] [5]
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 168.
+ [6]
+[7] [8]
 This exam contains 0 questions with 0 parts, 0 subparts, and 0 subsubparts.
+
+Class exam Warning: Point totals have changed. Rerun to get point totals right.
+
+
 (./examdatabaseAK.aux) ) 
 Here is how much of TeX's memory you used:
- 1160 strings out of 493304
- 14952 string characters out of 6139871
- 81712 words of memory out of 5000000
- 4693 multiletter control sequences out of 15000+600000
+ 1159 strings out of 493304
+ 14932 string characters out of 6139871
+ 82712 words of memory out of 5000000
+ 4694 multiletter control sequences out of 15000+600000
  3808 words of font info for 15 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 29i,9n,19p,424b,233s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 29i,9n,19p,424b,234s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
 nts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
 cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10
 .pfb>
-Output written on examdatabaseAK.pdf (5 pages, 49817 bytes).
+Output written on examdatabaseAK.pdf (8 pages, 56726 bytes).
 PDF statistics:
- 32 PDF objects out of 1000 (max. 8388607)
- 21 compressed objects within 1 object stream
+ 43 PDF objects out of 1000 (max. 8388607)
+ 29 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
