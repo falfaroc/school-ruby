@@ -19,17 +19,17 @@ r003 and r004, respectively.
 
 Step 1:  From 
    https://gist.github.com/jithinabraham/f23652a8bc6ae6e7a6c31f5680da6bc8
-cut and past heap_sort.rb, which has the ruby source of a class HeapSort. --DONE
+cut and past heap_sort.rb, which has the ruby source of a class HeapSort.
 
 
 Step 2: Add instrumentation so that you can run simplecov and rspec with it
-to verify that HeapSort.new([3, 2, 1]).heap_sort returns [1, 2, 3] --DONE
+to verify that HeapSort.new([3, 2, 1]).heap_sort returns [1, 2, 3]
 
-Step 3: Create more tests so that simplecov shows 100% coverage of HeapSort. --DONE
+Step 3: Create more tests so that simplecov shows 100% coverage of HeapSort.
 
 Step 4: Refactor heap_sort.rb so that reek is happy with it while checking
 that your tests pass and that you still have 100% coverage according to
-simplecov (adding new tests as necessary). --DONE
+simplecov (adding new tests as necessary).
 
 Step 5: Of course the interesting thing about heapsort is how fast it is.
 What I would like to know is does this implementation have a performance
@@ -57,12 +57,12 @@ With this, we can write a simple bit of code that tries larger and larger
 arrays or random values until it finds the size array such that the number
 of array accesses is less than n * sqrt(n) where n is the size of the array
 being sorted.  This gives us some indication that it is probably an efficient
-sort. - DONE
+sort.
 
 Step 6:  If you have not already done so, add a set of tests that cover
 the class ArrayWatcher seperately.  Note these can be run in isolation by
 using rspec's tag feature described in
-  https://stackoverflow.com/questions/5069677/how-do-i-run-only-specific-tests-in-rspec --DONE
+  https://stackoverflow.com/questions/5069677/how-do-i-run-only-specific-tests-in-rspec
 
 Step 7: Can you do better than this?  That is set up a collection of tests
 that not only show that it is O (n * log n) but what the bounding value k is
