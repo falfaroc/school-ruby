@@ -1,0 +1,36 @@
+r007 is another `ruby task'.  In order to record practice on this task, you 
+will need to commit messages whose first line is:
+    RPT: r007 time
+where time is replaced by a numeric value less than or equal to 30 and
+corresponding to the amount of practice time (in minutes) you spent 
+since the last such commit on the task r007.  The body of the message will 
+tell how far you have gotten with the task so far and what problems, 
+if any, you are having completing the task.  Note that these commits 
+are not direct communications with the prof, but instead notes in your
+practice report which probably won't be read until the practice report is 
+marked.  By now you should be familiar with this routine and the various
+related wiki presentations, particularly
+  A Checklist for Week 2 and on's Practice
+and
+  On the marking of the first week of practice
+
+This particular task uses rspec and simplecov which were introduced in
+r003 and r004, respectively.  It brings in a third library, mutant.
+
+Step 1:  From 
+   https://github.com/IuliiaKot/quicksort_median_of_three
+download quicksort_median_of_three along with its accompanying rspec
+test suite.
+
+
+Step 2: Add instrumentation so that you can run simplecov and check to
+see if the test suite covers all the statements of quicksort_median_of_three.rb
+If not, add tests to ensure 100% statement coverage.
+
+Step 3: Now we want to consider the quality of the tests by using mutation
+testing.  See Notes re eighth class for more details on how to set up and
+use mutation testing.  Also useful is the documentation and links at
+    https://github.com/mbj/mutant
+Add new tests to kill mutants where possible and verify the correctness of
+mutants that couldn't be killed.
+
