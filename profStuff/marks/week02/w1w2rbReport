@@ -1,0 +1,96 @@
+1c1
+< total time reported is: 220.0
+---
+> total time reported is: 411.0
+85a86,176
+> 
+> commit 08cd945a6da582f4300619780a57d9dccf5f5bf4
+> Author: Fernando Enrique Alfaro Campos <falfaroc@uwo.ca>
+> Date:   Mon Oct 2 21:31:54 2017 -0400
+> 
+>     RPT: r002 25
+>     
+>     Reading the requirements for r002. Setting up checkout.rb and checkout_test.rb.
+>     Resolving the two errors so they are only warnings now. Running reek on checkout.rb
+>     and ensuring that there is no code smell.
+>     
+>     Since we are not modifying checkout_test.rb, not resolving the code smell pointed
+>     out by reek. Working on setting the rules.
+> 
+> commit 03886073392a9f1ae9a8d04aa1e1bdd266292db3
+> Author: Fernando Enrique Alfaro Campos <falfaroc@uwo.ca>
+> Date:   Mon Oct 2 22:09:06 2017 -0400
+> 
+>     RPT: r002 30
+>     
+>     Modified the hash table to be a nested hash table so it handles the
+>     discounts differently. Created a Discount class for the specific
+>     discount per item.
+>     
+>     Looking into why my totals variable does not reset on object initialization.
+>     Next, modifying the totals calculation.
+> 
+> commit d033a9aee61bf8c87965096bb18f51b866e807dd
+> Author: Fernando Enrique Alfaro Campos <falfaroc@uwo.ca>
+> Date:   Mon Oct 2 23:00:43 2017 -0400
+> 
+>     RPT: r002 30
+>     
+>     Fixed the attribute issue between objects. Created a hash that will count
+>     the number of each item inputted.
+>     
+>     Calculating the correct total value is next.
+>     
+>     Learning about hash and working with them took a bit of time.
+> 
+> commit bd26e2feebf3d5fabdb63ac9ce2748b593990a6e
+> Author: Fernando Enrique Alfaro Campos <falfaroc@uwo.ca>
+> Date:   Tue Oct 3 10:25:15 2017 -0400
+> 
+>     RPT: r002 30
+>     
+>     Solved why certain variables were being overwritten. Learned the difference
+>     between global variables and instance variables. Modified the hash table
+>     that keeps track of the BasePrice class and Discount class.
+>     
+>     Need to run reek on the modified code to ensure there is no code smell.
+>     Fixing those will take sometime.
+> 
+> commit ca6fe4efd8b1473881cdb81ca74951b2b8f0f33c
+> Author: Fernando Enrique Alfaro Campos <falfaroc@uwo.ca>
+> Date:   Tue Oct 3 10:50:03 2017 -0400
+> 
+>     RPT: r002 20
+>     
+>     Modified program to pass all the test cases. Incorrect calculation being
+>     done.
+>     
+>     Learned what attr_reader does and helps so that I do not have to implement
+>     that function.
+>     
+>     Going to run reek and begin fixing the code smell throughout the program.
+> 
+> commit 2ad3c3bfc5c23a55d880925201ae591623417ecf
+> Author: Fernando Enrique Alfaro Campos <falfaroc@uwo.ca>
+> Date:   Tue Oct 3 15:02:01 2017 -0400
+> 
+>     RPT: r002 30
+>     
+>     Fixed all the warnings thrown by reek. Seperated the multiple method calls
+>     into their own functions.
+>     Basically, once the core logic was ironed out, all the test cases ran and
+>     passed.
+>     
+>     Task is done, might continue to clean up code. Will work and try to finish
+>     previous steps in r001.
+> 
+> commit 65be36098f94482482aad4fd1bc58ed2a90f14f5
+> Author: Fernando Enrique Alfaro Campos <falfaroc@uwo.ca>
+> Date:   Wed Oct 4 21:31:05 2017 -0400
+> 
+>     RPT: r001 26
+>     
+>     Modified the variables in the print class to be instance
+>     variables and that fixed many of the incorrect value issues.
+>     
+>     No problems completing step 9 after fixing the statement above.

@@ -1,0 +1,111 @@
+1c1
+< total time reported is: 411.0
+---
+> total time reported is: 592.0
+176a177,282
+> 
+> commit dc2916957aced115d75b466cf6621bae3d567c53
+> Author: Fernando Enrique Alfaro Campos <falfaroc@uwo.ca>
+> Date:   Sun Oct 15 12:47:48 2017 -0400
+> 
+>     RPT: r003 30
+>     
+>     Set up the environment to use rspec instead of minitest.
+>     Obtain all the files needed to proceed with this task.
+>     
+>     Downloaded the solution file and was confused as to why the
+>     test passed. Should read instruction more carefully.
+> 
+> commit 7515d88e09faa7725ecb7edc04206c7550e7f3c5
+> Author: Fernando Enrique Alfaro Campos <falfaroc@uwo.ca>
+> Date:   Sun Oct 15 20:17:29 2017 -0400
+> 
+>     RPT: r003 30
+>     
+>     Modified the regex variables to split the lines
+>     in the text properly. This took time researching
+>     how to properly use regex in Ruby. Added a regex
+>     help section to remind me what each metacharacter does.
+> 
+> commit 8b2d0e5d00e4eacb87b4267f62df28ed2096663a
+> Author: Fernando Enrique Alfaro Campos <falfaroc@uwo.ca>
+> Date:   Sun Oct 15 21:14:02 2017 -0400
+> 
+>     RPT: r003 30
+>     
+>     Figuring out how to traverse through the lines and
+>     see how to add spaces to fill the width.
+>     
+>     Array manupilation is very powerful in Ruby so figuring out
+>     the best way to approach this is time consuming.
+> 
+> commit b26408e3b85433d9aaf087298b5eb6ff0acca557
+> Author: Fernando Enrique Alfaro Campos <falfaroc@uwo.ca>
+> Date:   Sun Oct 15 21:49:57 2017 -0400
+> 
+>     RPT: r003 26
+>     
+>     Fix line_justification to properly replace spacing
+>     according to specifications. Ran all the rspec tests
+>     and all passed.
+>     
+>     Noticed afterwards that the final line does not need
+>     to be justified.
+>     
+>     Still need to run reek and fix any code smell.
+> 
+> commit e35444290e3e5b8fc34fe7dcbeac7c23f1475f05
+> Author: Fernando Enrique Alfaro Campos <falfaroc@uwo.ca>
+> Date:   Sun Oct 15 22:12:24 2017 -0400
+> 
+>     RPT: r003 15
+>     
+>     Fixed the following reek errors; UtilityFunction
+>     and UncommunicativeVaribleName. By splitting the justify_line
+>     function to perform the length checks elsewhere, that fixed the
+>     UtilityFunction warning.
+>     
+>     By changing the for loop to a while loop so that there was
+>     no extra variable 'i', that fixed the UncommuncativeVariableName
+>     warning.
+> 
+> commit 5c5e787c5de6710e25f06d4c4f23a6f3f9170ddf
+> Author: Fernando Enrique Alfaro Campos <falfaroc@uwo.ca>
+> Date:   Sun Oct 15 22:39:36 2017 -0400
+> 
+>     RPT: r003 20
+>     
+>     Fixed the following reek warnings; DuplicateMethodCall,
+>     FeatureEnvy and TooManyStatements.
+>     
+>     By creating the space_append method, and moving the while
+>     loop in there, that fixed the TooManyStatements from the
+>     justify_line method and the DuplicateMethodCall from
+>     space_location.next.
+>     
+>     By creating an init method where all instance variables
+>     are created, that fixed the FeatureEnvy warning.
+> 
+> commit 5d00638a6c304b116752063e40d47951656ae1f8
+> Author: Fernando Enrique Alfaro Campos <falfaroc@uwo.ca>
+> Date:   Sun Oct 15 23:03:29 2017 -0400
+> 
+>     RPT: r003 20
+>     
+>     Fixed the following reek warning; TooManyStatements.
+>     This warning was raised by the justify method. I fixed
+>     it by modifying and moving certain statements into a
+>     new function.
+>     
+>     Only one more reek warning remaining, ControlParameter.
+> 
+> commit 8d6b99e3f721e6fa09c14593a9251643d751e815
+> Author: Fernando Enrique Alfaro Campos <falfaroc@uwo.ca>
+> Date:   Sun Oct 15 23:17:43 2017 -0400
+> 
+>     RPT: r003 10
+>     
+>     Fixed the final reek warning; ControlParameter.
+>     This warning arose from a regex comparison method.
+>     One can use either '=~' or '.match' to achieve the
+>     same results. When used '.match', the warning was resolved.
