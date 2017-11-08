@@ -11,13 +11,13 @@ class Sort
       while (lo < hi)
         p = partition(ar, lo, hi)
         quicksort(ar, lo, p - 1)
-        lo = p+1
+        lo = (p + 1)
         #quicksort(ar, p + 1, hi)
       end
     end
 
-    # return ar
-    ar
+    return ar
+    # ar
   end
 
   def self.partition(ar, lo, hi)
@@ -32,7 +32,7 @@ class Sort
         ar[i],ar[j] = ar[j],ar[i]
       end
     end
-    i = i + 1
+    i = (i + 1)
     ar[i], ar[hi] = ar[hi], ar[i]
 
     return i
