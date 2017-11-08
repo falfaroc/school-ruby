@@ -39,4 +39,22 @@ describe Sort do
       expect(output).to eq [2,3,3,6,7,9]
     end
   end
+
+  describe  "quicksot" do
+    let(:input) {[3,6,2,3,9,7,3,6,2,3,9,7,3,6,2,3,9,7,3,6,2,3,9,7]}
+    let(:output) {subject.quicksort(input, 0, input.length - 1)}
+
+    it "sort of array" do
+      expect(output).to eq [2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 6, 6, 6, 6, 7, 7, 7, 7, 9, 9, 9, 9]
+    end
+  end
+
+  describe  "choose_pivot middle" do
+    let(:input) {[3,6,6,3,9]}
+    let(:output) {subject.choose_pivot(input, 0, input.length - 1)}
+
+    it "choose middle pivot element" do
+      expect(output).to eq 2
+    end
+  end
 end
