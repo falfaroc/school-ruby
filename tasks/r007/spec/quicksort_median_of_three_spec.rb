@@ -20,16 +20,6 @@ describe Sort do
     it "choose pivot element" do
       expect(output).to eq 0
     end
-
-    input = [0,6,2,3,9,7]
-    it "choose pivot element" do
-        expect(output).to eq 0
-    end
-
-    input = [7,6,2,3,9,7]
-    it "choose pivot element" do
-        expect(output).to eq 0
-    end
   end
 
   describe("partition") do
@@ -77,7 +67,7 @@ describe Sort do
     end
   end
 
-  describe "choose_pivot" do
+  describe "choose_pivot lo nil value" do
     let(:input) {[3,6,6,3,9]}
     let(:output) {subject.choose_pivot(input, nil, input.length - 1)}
 
@@ -86,12 +76,21 @@ describe Sort do
     end
   end
 
-  describe "choose_pivot" do
+  describe "choose_pivot hi out of range" do
     let(:input) {[3,6,6,3,9]}
     let(:output) {subject.choose_pivot(input, 0, 20)}
 
     it "raise" do
         expect{output}.to raise_error(IndexError)
+    end
+  end
+
+  describe "choose_pivot lo > hi" do
+    let(:input) {[3,6,6,3,9]}
+    let(:output) {subject.choose_pivot(input, 4, 2)}
+
+    it "choose a pivot" do
+        expect(output).to eq 2
     end
   end
 

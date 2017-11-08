@@ -23,11 +23,11 @@ class Sort
   def self.partition(ar, lo, hi)
 
     index = choose_pivot(ar, lo, hi)
-    pivot = ar[index]
+    pivot = ar.fetch(index)
     ar[index], ar[hi] = ar[hi], ar[index]
     i = lo - 1
     (lo...hi).each do |j|
-      if (ar[j] <= pivot)
+      if (ar.fetch(j) <= pivot)
         i = i + 1
         ar[i],ar[j] = ar[j],ar[i]
       end
@@ -55,7 +55,7 @@ class Sort
   def  self.insertionSort(ar, lo, hi)
 
     (lo + 1..hi).each do |i|
-      value = ar[i]
+      value = ar.fetch(i)
       j = i - 1
       while (j >= 0 && ar.fetch(j) > value)
         ar[j+1] = ar.fetch(j)
