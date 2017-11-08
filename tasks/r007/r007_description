@@ -20,12 +20,12 @@ r003 and r004, respectively.  It brings in a third library, mutant.
 Step 1:  From 
    https://github.com/IuliiaKot/quicksort_median_of_three
 download quicksort_median_of_three along with its accompanying rspec
-test suite. -- DONE
+test suite.
 
 
 Step 2: Add instrumentation so that you can run simplecov and check to
 see if the test suite covers all the statements of quicksort_median_of_three.rb
-If not, add tests to ensure 100% statement coverage. -- DONE
+If not, add tests to ensure 100% statement coverage.
 
 Step 3: Now we want to consider the quality of the tests by using mutation
 testing.  See Notes re eighth class for more details on how to set up and
