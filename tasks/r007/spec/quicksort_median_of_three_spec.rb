@@ -1,5 +1,14 @@
 require 'spec_helper'
 require 'quicksort_median_of_three'
+require 'timeout'
+
+RSpec.configure do |c|
+    c.around(:each) do |example|
+      Timeout::timeout(2) {
+        example.run
+      }
+    end
+end
 
 describe Sort do
   subject { Sort }
