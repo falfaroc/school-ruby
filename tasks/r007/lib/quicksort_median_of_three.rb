@@ -2,6 +2,7 @@ require "quicksort_median_of_three/version"
 
 class Sort
   # Your code goes here...
+  ONE_VAL = 1
 
   def self.quicksort(ar, lo, hi)
 
@@ -16,8 +17,7 @@ class Sort
       end
     end
 
-    return ar
-    # ar
+    ar
   end
 
   def self.partition(ar, lo, hi)
@@ -35,7 +35,7 @@ class Sort
     i = (i + 1)
     ar[i], ar[hi] = ar[hi], ar[i]
 
-    return i
+    i
   end
 
   def self.choose_pivot(ar, lo, hi)
@@ -43,12 +43,12 @@ class Sort
     left = lo
     right = hi
     center = (left + right) / 2
-    if ((ar[left] - ar[right]) * (ar[center] - ar[left]) >= 0)
-      return left
-    elsif ((ar[right] - ar[left]) * (ar[center] - ar[right]) >= 0)
-      return right
+    if ((ar.fetch(left) - ar.fetch(right)) * (ar.fetch(center) - ar.fetch(left)) >= 0)
+      left
+    elsif ((ar.fetch(right) - ar.fetch(left)) * (ar.fetch(center) - ar.fetch(right)) >= 0)
+      right
     else
-      return center
+      center
     end
   end
 
@@ -57,14 +57,14 @@ class Sort
     (lo + 1..hi).each do |i|
       value = ar[i]
       j = i - 1
-      while (j >= 0 && ar[j] > value)
-        ar[j+1] = ar[j]
+      while (j >= 0 && ar.fetch(j) > value)
+        ar[j+1] = ar.fetch(j)
         j -= 1
       end
       ar[j+1] = value
     end
 
-    return ar
+    ar
   end
 
 end

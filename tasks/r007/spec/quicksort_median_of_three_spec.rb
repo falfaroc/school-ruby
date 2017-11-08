@@ -21,12 +21,15 @@ describe Sort do
       expect(output).to eq 0
     end
 
-    let(:outp) {subject.choose_pivot(input, nil, input.length - 1)}
-    it "raise" do
-        expect{outp}.to raise_error(NoMethodError)
-        # expect(output).to eq 2
+    input = [0,6,2,3,9,7]
+    it "choose pivot element" do
+        expect(output).to eq 0
     end
 
+    input = [7,6,2,3,9,7]
+    it "choose pivot element" do
+        expect(output).to eq 0
+    end
   end
 
   describe("partition") do
@@ -74,14 +77,22 @@ describe Sort do
     end
   end
 
-#   describe "choose_pivot" do
-#     let(:input) {[3,6,6,3,9]}
-#     let(:output) {subject.choose_pivot(input, nil, input.length - 1)}
+  describe "choose_pivot" do
+    let(:input) {[3,6,6,3,9]}
+    let(:output) {subject.choose_pivot(input, nil, input.length - 1)}
 
-#     it "raise" do
-#         expect{output}.to raise_error(NoMethodError)
-#         # expect(output).to eq 2
-#     end
-#   end
+    it "raise" do
+        expect{output}.to raise_error(NoMethodError)
+    end
+  end
+
+  describe "choose_pivot" do
+    let(:input) {[3,6,6,3,9]}
+    let(:output) {subject.choose_pivot(input, 0, 20)}
+
+    it "raise" do
+        expect{output}.to raise_error(IndexError)
+    end
+  end
 
 end
