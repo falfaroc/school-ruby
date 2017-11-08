@@ -16,7 +16,8 @@ class Sort
       end
     end
 
-    return ar
+    # return ar
+    ar
   end
 
   def self.partition(ar, lo, hi)

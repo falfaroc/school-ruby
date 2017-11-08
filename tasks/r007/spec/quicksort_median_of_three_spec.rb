@@ -49,7 +49,7 @@ describe Sort do
     end
   end
 
-  describe  "quicksot" do
+  describe  "quicksot_large" do
     let(:input) {[3,6,2,3,9,7,3,6,2,3,9,7,3,6,2,3,9,7,3,6,2,3,9,7]}
     let(:output) {subject.quicksort(input, 0, input.length - 1)}
 
