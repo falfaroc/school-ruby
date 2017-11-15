@@ -17,9 +17,11 @@ class QuietPrintMethod
 
 	def print_m(print_this)
 		@log.push(print_this)
-		time = print_this.partition(" ").first
+		# time = print_this.partition(" ").first
+		finish_time = Time.now
+		time_int = finish_time - @start
 
-		@time_log.push(time)
+		@time_log.push(time_int)
 	end
 
 	# :reek:UncommunicativeMethodName
@@ -34,7 +36,7 @@ class QuietPrintMethod
 
 	def time_log(index)
 		time = @time_log.at(index)
-		time.to_i
+		# time.to_i
 	end
 
 	def number_of_messages
