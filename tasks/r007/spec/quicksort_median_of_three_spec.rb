@@ -121,4 +121,13 @@ describe Sort do
     end
   end
 
+  describe  "quicksot - negative lo value" do
+    let(:input) {[3,6,2,3,9,7,3,6,2,3,9,7,3,6,2,3,9,7,1,12]}
+    let(:output) {subject.quicksort(input, -1, input.length - 1)}
+
+    it "sort of array" do
+      expect(output).to eq [1, 2, 2, 2, 3, 3, 3, 3, 3, 3, 6, 6, 6, 7, 7, 7, 9, 9, 9, 12]
+    end
+  end
+
 end
