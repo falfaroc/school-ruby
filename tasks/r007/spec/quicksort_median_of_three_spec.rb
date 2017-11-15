@@ -101,6 +101,24 @@ describe Sort do
     it "choose middle element" do
         expect(output).to eq 1
     end
-end
+  end
+
+  describe "inverse - pivot test with only the last few numbers" do
+    let(:input) {[10,9,8,7,6,5,4]}
+    let(:output) {subject.choose_pivot(input, 2, input.length - 1)}
+    
+    it "choose middle element" do
+        expect(output).to eq 4
+    end
+  end
+
+  describe "sort only the first couple values" do
+    let(:input) {[2,1,1,1,1,1,1,0]}
+    let(:output) {subject.insertionSort(input, 0, 2)}
+    
+    it "choose pivot element" do
+        expect(output).to eq [1,1,2,1,1,1,1,0]
+    end
+  end
 
 end
