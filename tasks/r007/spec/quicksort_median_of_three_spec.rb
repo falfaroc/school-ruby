@@ -58,6 +58,15 @@ describe Sort do
     end
   end
 
+  describe  "quicksort - size is 20" do
+    let(:input) {[3,6,2,3,9,7,3,6,2,3,9,7,3,6,2,3,9,7,1,12,12]}
+    let(:output) {subject.quicksort(input, 10, 20)}
+
+    it "sort of array" do
+      expect(output).to eq [1, 3, 6, 2, 3, 9, 7, 3, 6, 2, 2, 3, 3, 3, 6, 7, 7, 9, 9, 12, 12]
+    end
+  end
+
   describe  "choose_pivot middle" do
     let(:input) {[3,6,6,3,9]}
     let(:output) {subject.choose_pivot(input, 0, input.length - 1)}
