@@ -1,0 +1,46 @@
+r008 is another `ruby task'.  In order to record practice on this task, you 
+will need to commit messages whose first line is:
+    RPT: r008 time
+where time is replaced by a numeric value less than or equal to 30 and
+corresponding to the amount of practice time (in minutes) you spent 
+since the last such commit on the task r008.  The body of the message will 
+tell how far you have gotten with the task so far and what problems, 
+if any, you are having completing the task.  Note that these commits 
+are not direct communications with the prof, but instead notes in your
+practice report which probably won't be read until the practice report is 
+marked.  By now you should be familiar with this routine and the various
+related wiki presentations, particularly
+  A Checklist for Week 2 and on's Practice
+and
+  On the marking of the first week of practice
+
+This particular task uses rspec, simplecov, and mutant which were introduced in
+r003, r004, and r007, respectively. 
+
+Step 1:  From 
+   https://github.com/joh1030/nimruby
+download the nim game.
+
+Step 2: In nimTest.rb, you will find MiniTest tests for nim.rb.  Rewrite them
+into rspec tests. 
+
+Step 3: Use simplecov to check coverage of your rspec tests.  You will find
+they don't cover much of nim.rb .  The main problem here is that there is
+a lot of i/o mixed with the game logic in nim.rb .  There are two ways this
+could be handled.  One is to do a huge refactoring to extract the i/o from
+the game logic.  The other is to use some of the more advanced features of
+rspec.  See
+   http://tommaso.pavese.me/2016/05/08/understanding-and-testing-io-in-ruby/
+   http://www.getlaura.com/how-to-test-ruby-io/
+   https://stackoverflow.com/questions/4070422/rspec-how-to-test-file-operations-and-file-content
+   https://relishapp.com/rspec/rspec-expectations/docs/built-in-matchers/output-matcher
+Add to the Rspec tests a test that plays through one game sequence of inputs
+and outputs verifying that the code handles them correctly.
+
+Step 4: Now that we can handle i/o in our tests, we should be able to write
+rspec tests that give 100% coverage to nim.rb's Nim class and verify this using
+simplecov.
+
+Step 5: Now that we have 100% statement coverage, it is time to pull out mutant
+and try to kill as many mutants of the methods in Nim as possible giving us
+a pretty solid test suite for this code.
