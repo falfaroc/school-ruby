@@ -14,14 +14,14 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2017-11-08T15:36:28-05:00">2017-11-08T15:36:28-05:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2017-11-15T13:47:02-05:00">2017-11-15T13:47:02-05:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="red">79.63%</span></span>
+    (<span class="covered_percent"><span class="red">79.66%</span></span>
      covered at
      <span class="covered_strength">
        <span class="red">
@@ -32,9 +32,9 @@
   <a name="AllFiles"></a>
   <div>
     <b>1</b> files in total.
-    <b>54</b> relevant lines. 
-    <span class="green"><b>43</b> lines covered</span> and
-    <span class="red"><b>11</b> lines missed </span>
+    <b>59</b> relevant lines. 
+    <span class="green"><b>47</b> lines covered</span> and
+    <span class="red"><b>12</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -52,11 +52,11 @@
       
       <tr>
         <td class="strong"><a href="#f2af4c2e53ae3edce39343073536aef4b3471807" class="src_link" title="spec/quicksort_median_of_three_spec.rb">spec/quicksort_median_of_three_spec.rb</a></td>
-        <td class="red strong">79.63 %</td>
-        <td>102</td>
-        <td>54</td>
-        <td>43</td>
-        <td>11</td>
+        <td class="red strong">79.66 %</td>
+        <td>106</td>
+        <td>59</td>
+        <td>47</td>
+        <td>12</td>
         <td>0.8</td>
       </tr>
       
@@ -79,11 +79,11 @@
         <div class="source_table" id="f2af4c2e53ae3edce39343073536aef4b3471807">
   <div class="header">
     <h3>spec/quicksort_median_of_three_spec.rb</h3>
-    <h4><span class="red">79.63 %</span> covered</h4>
+    <h4><span class="red">79.66 %</span> covered</h4>
     <div>
-      <b>54</b> relevant lines. 
-      <span class="green"><b>43</b> lines covered</span> and
-      <span class="red"><b>11</b> lines missed.</span>
+      <b>59</b> relevant lines. 
+      <span class="green"><b>47</b> lines covered</span> and
+      <span class="red"><b>12</b> lines missed.</span>
     </div>
   </div>
   
@@ -225,61 +225,61 @@
         <li class="never" data-hits="" data-linenumber="23">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="24">
           
           
-          <code class="ruby">    # input = [7,6,2,3,9,7]</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="25">
-          
-          
-          <code class="ruby">    # it &quot;choose pivot element&quot; do</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="26">
-          
-          
-          <code class="ruby">    #     expect(output).to eq 0</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="27">
-          
-          
-          <code class="ruby">    # end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="28">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="29">
-          
-          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="30">
+        <li class="covered" data-hits="1" data-linenumber="25">
           <span class="hits">1</span>
           
           <code class="ruby">  describe(&quot;partition&quot;) do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="31">
+        <li class="covered" data-hits="1" data-linenumber="26">
           <span class="hits">1</span>
           
           <code class="ruby">    let(:input) { [3, 6, 2, 3, 9, 7] }</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="32">
+        <li class="covered" data-hits="1" data-linenumber="27">
           <span class="hits">1</span>
           
           <code class="ruby">    let(:output) { subject.partition(input, 0, input.length - 1) }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="28">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="29">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &quot;partition around the pivot.return index of the pivot element&quot; do</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="30">
+          
+          
+          <code class="ruby">      expect(output).to eq 2</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="31">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="32">
+          
+          
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="33">
@@ -291,49 +291,49 @@
         <li class="covered" data-hits="1" data-linenumber="34">
           <span class="hits">1</span>
           
-          <code class="ruby">    it &quot;partition around the pivot.return index of the pivot element&quot; do</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="35">
-          
-          
-          <code class="ruby">      expect(output).to eq 2</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="36">
-          
-          
-          <code class="ruby">    end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="37">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="38">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="39">
-          <span class="hits">1</span>
-          
           <code class="ruby">  describe(&quot;insersorting&quot;) do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="40">
+        <li class="covered" data-hits="1" data-linenumber="35">
           <span class="hits">1</span>
           
           <code class="ruby">    let(:input) { [3, 6, 2, 3, 9, 7] }</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="41">
+        <li class="covered" data-hits="1" data-linenumber="36">
           <span class="hits">1</span>
           
           <code class="ruby">    let(:output) { subject.insertionSort(input, 0, input.length - 1) }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="37">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="38">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &quot;sort&quot; do</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="39">
+          
+          
+          <code class="ruby">      expect(output).to eq [2,3,3,6,7,9]</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="40">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="41">
+          
+          
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="42">
@@ -345,49 +345,49 @@
         <li class="covered" data-hits="1" data-linenumber="43">
           <span class="hits">1</span>
           
-          <code class="ruby">    it &quot;sort&quot; do</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="44">
-          
-          
-          <code class="ruby">      expect(output).to eq [2,3,3,6,7,9]</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="45">
-          
-          
-          <code class="ruby">    end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="46">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="47">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="48">
-          <span class="hits">1</span>
-          
           <code class="ruby">  describe  &quot;quicksot&quot; do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="49">
+        <li class="covered" data-hits="1" data-linenumber="44">
           <span class="hits">1</span>
           
           <code class="ruby">    let(:input) {[3,6,2,3,9,7]}</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="50">
+        <li class="covered" data-hits="1" data-linenumber="45">
           <span class="hits">1</span>
           
           <code class="ruby">    let(:output) {subject.quicksort(input, 0, input.length - 1)}</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="46">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="47">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &quot;sort of array&quot; do</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="48">
+          
+          
+          <code class="ruby">      expect(output).to eq [2,3,3,6,7,9]</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="49">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="50">
+          
+          
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="51">
@@ -399,49 +399,49 @@
         <li class="covered" data-hits="1" data-linenumber="52">
           <span class="hits">1</span>
           
-          <code class="ruby">    it &quot;sort of array&quot; do</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="53">
-          
-          
-          <code class="ruby">      expect(output).to eq [2,3,3,6,7,9]</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="54">
-          
-          
-          <code class="ruby">    end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="55">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="56">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="57">
-          <span class="hits">1</span>
-          
           <code class="ruby">  describe  &quot;quicksot_large&quot; do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="58">
+        <li class="covered" data-hits="1" data-linenumber="53">
           <span class="hits">1</span>
           
           <code class="ruby">    let(:input) {[3,6,2,3,9,7,3,6,2,3,9,7,3,6,2,3,9,7,3,6,2,3,9,7]}</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="59">
+        <li class="covered" data-hits="1" data-linenumber="54">
           <span class="hits">1</span>
           
           <code class="ruby">    let(:output) {subject.quicksort(input, 0, input.length - 1)}</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="55">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="56">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &quot;sort of array&quot; do</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="57">
+          
+          
+          <code class="ruby">      expect(output).to eq [2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 6, 6, 6, 6, 7, 7, 7, 7, 9, 9, 9, 9]</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="58">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="59">
+          
+          
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="60">
@@ -453,49 +453,49 @@
         <li class="covered" data-hits="1" data-linenumber="61">
           <span class="hits">1</span>
           
-          <code class="ruby">    it &quot;sort of array&quot; do</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="62">
-          
-          
-          <code class="ruby">      expect(output).to eq [2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 6, 6, 6, 6, 7, 7, 7, 7, 9, 9, 9, 9]</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="63">
-          
-          
-          <code class="ruby">    end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="64">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="65">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="66">
-          <span class="hits">1</span>
-          
           <code class="ruby">  describe  &quot;choose_pivot middle&quot; do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="67">
+        <li class="covered" data-hits="1" data-linenumber="62">
           <span class="hits">1</span>
           
           <code class="ruby">    let(:input) {[3,6,6,3,9]}</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="68">
+        <li class="covered" data-hits="1" data-linenumber="63">
           <span class="hits">1</span>
           
           <code class="ruby">    let(:output) {subject.choose_pivot(input, 0, input.length - 1)}</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="64">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="65">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &quot;choose middle pivot element&quot; do</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="66">
+          
+          
+          <code class="ruby">      expect(output).to eq 2</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="67">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="68">
+          
+          
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="69">
@@ -507,49 +507,49 @@
         <li class="covered" data-hits="1" data-linenumber="70">
           <span class="hits">1</span>
           
-          <code class="ruby">    it &quot;choose middle pivot element&quot; do</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="71">
-          
-          
-          <code class="ruby">      expect(output).to eq 2</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="72">
-          
-          
-          <code class="ruby">    end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="73">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="74">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="75">
-          <span class="hits">1</span>
-          
           <code class="ruby">  describe &quot;choose_pivot lo nil value&quot; do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="76">
+        <li class="covered" data-hits="1" data-linenumber="71">
           <span class="hits">1</span>
           
           <code class="ruby">    let(:input) {[3,6,6,3,9]}</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="77">
+        <li class="covered" data-hits="1" data-linenumber="72">
           <span class="hits">1</span>
           
           <code class="ruby">    let(:output) {subject.choose_pivot(input, nil, input.length - 1)}</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="73">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="74">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &quot;raise&quot; do</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="75">
+          
+          
+          <code class="ruby">        expect{output}.to raise_error(NoMethodError)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="76">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="77">
+          
+          
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="78">
@@ -561,49 +561,49 @@
         <li class="covered" data-hits="1" data-linenumber="79">
           <span class="hits">1</span>
           
-          <code class="ruby">    it &quot;raise&quot; do</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="80">
-          
-          
-          <code class="ruby">        expect{output}.to raise_error(NoMethodError)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="81">
-          
-          
-          <code class="ruby">    end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="82">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="83">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="84">
-          <span class="hits">1</span>
-          
           <code class="ruby">  describe &quot;choose_pivot hi out of range&quot; do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="85">
+        <li class="covered" data-hits="1" data-linenumber="80">
           <span class="hits">1</span>
           
           <code class="ruby">    let(:input) {[3,6,6,3,9]}</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="86">
+        <li class="covered" data-hits="1" data-linenumber="81">
           <span class="hits">1</span>
           
           <code class="ruby">    let(:output) {subject.choose_pivot(input, 0, 20)}</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="82">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="83">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &quot;raise&quot; do</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="84">
+          
+          
+          <code class="ruby">        expect{output}.to raise_error(IndexError)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="85">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="86">
+          
+          
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="87">
@@ -615,49 +615,49 @@
         <li class="covered" data-hits="1" data-linenumber="88">
           <span class="hits">1</span>
           
-          <code class="ruby">    it &quot;raise&quot; do</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="89">
-          
-          
-          <code class="ruby">        expect{output}.to raise_error(IndexError)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="90">
-          
-          
-          <code class="ruby">    end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="91">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="92">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="93">
-          <span class="hits">1</span>
-          
           <code class="ruby">  describe &quot;choose_pivot lo &gt; hi&quot; do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="94">
+        <li class="covered" data-hits="1" data-linenumber="89">
           <span class="hits">1</span>
           
           <code class="ruby">    let(:input) {[3,6,6,3,9]}</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="95">
+        <li class="covered" data-hits="1" data-linenumber="90">
           <span class="hits">1</span>
           
           <code class="ruby">    let(:output) {subject.choose_pivot(input, 4, 2)}</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="91">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="92">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &quot;choose a pivot&quot; do</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="93">
+          
+          
+          <code class="ruby">        expect(output).to eq 2</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="94">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="95">
+          
+          
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="96">
@@ -669,34 +669,58 @@
         <li class="covered" data-hits="1" data-linenumber="97">
           <span class="hits">1</span>
           
-          <code class="ruby">    it &quot;choose a pivot&quot; do</code>
+          <code class="ruby">  describe &quot;another choose_pivot test&quot; do</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="98">
+        <li class="covered" data-hits="1" data-linenumber="98">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">        expect(output).to eq 2</code>
+          <code class="ruby">    let(:input) {[4,5,6]}</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="99">
+        <li class="covered" data-hits="1" data-linenumber="99">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">    end</code>
+          <code class="ruby">    let(:output) {subject.choose_pivot(input, 0, input.length - 1)}</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="100">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">    </code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="101">
+        <li class="covered" data-hits="1" data-linenumber="101">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &quot;choose middle element&quot; do</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="102">
+          
+          
+          <code class="ruby">        expect(output).to eq 1</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="103">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="104">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="105">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="102">
+        <li class="never" data-hits="" data-linenumber="106">
           
           
           <code class="ruby">end</code>

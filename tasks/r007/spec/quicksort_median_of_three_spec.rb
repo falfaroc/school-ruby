@@ -94,4 +94,13 @@ describe Sort do
     end
   end
 
+  describe "another choose_pivot test" do
+    let(:input) {[4,5,6]}
+    let(:output) {subject.choose_pivot(input, 0, input.length - 1)}
+    
+    it "choose middle element" do
+        expect(output).to eq 1
+    end
+end
+
 end
