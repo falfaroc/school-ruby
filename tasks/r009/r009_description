@@ -1,0 +1,39 @@
+r009 is another `ruby task'.  In order to record practice on this task, you 
+will need to commit messages whose first line is:
+    RPT: r009 time
+where time is replaced by a numeric value less than or equal to 30 and
+corresponding to the amount of practice time (in minutes) you spent 
+since the last such commit on the task r009.  The body of the message will 
+tell how far you have gotten with the task so far and what problems, 
+if any, you are having completing the task.  Note that these commits 
+are not direct communications with the prof, but instead notes in your
+practice report which probably won't be read until the practice report is 
+marked.  By now you should be familiar with this routine and the various
+related wiki presentations, particularly
+  A Checklist for Week 2 and on's Practice
+and
+  On the marking of the first week of practice
+
+This particular task introduces cucumber.  In the notes on the wiki for the
+nineth and tenth class, you will find many links to get you started with
+cucumber.  For doing this exercise, most of what you need is in
+   https://wiki.csd.uwo.ca/display/CS44722017/Cucumber+Example
+
+
+Step 1:  From 
+     https://gist.github.com/peterc/1582783
+cut and paste the code for gcd.rb into the r009 directory with that name.
+This code implements a particular approach to gcd called Stein's algorithm.
+
+Step 2: Create the feature directory structure necessary for running cucumber
+into r009 and insert into it a copy of profStuff/sample/gcd.feature .
+When you run cucumber, it should complain about my steps not being defined.
+
+Step 3: Guess what.  You get to implement the missing steps so that when
+cucumber runs my feature file it tests the gcd.rb code.
+
+Step 4: My feature file is rather tedious.  It would be nicer if I could
+group my input/ output values into a table.  Fortunately I can, see
+   https://github.com/cucumber/cucumber/wiki/Scenario-Outlines
+Restructure the feature file so that it uses this capability (no new
+step definitions should be necessary).

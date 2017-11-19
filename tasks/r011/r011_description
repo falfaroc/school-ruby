@@ -1,0 +1,49 @@
+r011 is another `ruby task'.  In order to record practice on this task, you 
+will need to commit messages whose first line is:
+    RPT: r011 time
+where time is replaced by a numeric value less than or equal to 30 and
+corresponding to the amount of practice time (in minutes) you spent 
+since the last such commit on the task r011.  The body of the message will 
+tell how far you have gotten with the task so far and what problems, 
+if any, you are having completing the task.  Note that these commits 
+are not direct communications with the prof, but instead notes in your
+practice report which probably won't be read until the practice report is 
+marked.  By now you should be familiar with this routine and the various
+related wiki presentations, particularly
+  A Checklist for Week 2 and on's Practice
+and
+  On the marking of the first week of practice
+
+This particular task continues work with cucumber (see r009 for introduction
+to cucumber). 
+
+Step 1: It turns out that they do programming contests at U Waterloo, see
+   http://acm.student.cs.uwaterloo.ca/~acm00/
+I am interested specifically in the first programming question of the
+1996 contest which can be found at:
+   http://acm.student.cs.uwaterloo.ca/~acm00/96fall1/latex/fall96a.pdf
+Near the end of that page, there is sample input and output for the 
+problem.  Create a cucumber feature file corresponding to specifying
+that input and output.
+
+Step 2: Create a file beancounting.rb that has a BeanCounting class which
+takes the input as a parameter to initialize and produces the output when
+the message count is sent to an instance of the BeanCounting class.  Then
+create the step definitions that connect the feature file to this dummy
+implementation.  Note we are ignoring the file i/o and assuming the
+inputs are passed as parameters to initialize.  The first parameter string
+is just a string.  The guess data becomes a list of pairs of names and list of 
+guesses and the result is a list of pairs of names and scores.
+
+Step 3: With this feature file as your acceptance test, develop the solution
+to the problem using TDD with your tests in RSpec.  Use reek to keep your
+code structured properly and simplecov to make sure you are testing all the
+code that you are writing.  Make sure your output list is in alphabetical
+order by name of guesser.
+
+Step 4: Once you are satisfied that you have solved the problem, download
+the test data at http://acm.student.cs.uwaterloo.ca/~acm00/96fall1/ and
+add these three test points to your feature file.  1.1.diff would be the 
+solution to the inputs 1.1.dat, 1.2.diff would be the solution to 1.2.dat,
+and 1.3.diff would be the solution to 1.3.dat.  See if your program still
+works.  If not, fix it, maintaining the approach of Step 3.
