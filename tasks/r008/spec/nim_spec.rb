@@ -6,6 +6,12 @@ describe Nim do
     before (:each) do
         #Initialize object
         @Nim = Nim.new(Player.new)
+        @output = StringIO.new
+
+        # @input = StringIO.new("test info\n")
+        # @output = StringIO.new
+        # @input_received = @ui.receive(@input)
+        # @ui.give("test message", @output)
     end
 
     #after smart computer makes the move, check_kernel_state should return true
