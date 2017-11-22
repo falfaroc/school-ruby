@@ -6,7 +6,7 @@ describe Nim do
     before (:each) do
         #Initialize object
         @Nim = Nim.new(Player.new)
-        @output = StringIO.new
+        # @output = StringIO.new
 
         # @input = StringIO.new("test info\n")
         # @output = StringIO.new
@@ -34,12 +34,7 @@ describe Nim do
         expect(@Nim.object.check_kernel_state([4, 3, 7])).to eq true
     end
 
-    it 'testing output stdout' do
-        # expect do
-        #     @Nim.start_game
-        # end.to output("Welcome to NIM!").to_stdout
-
-        # expect { @Nim.start_game(@output) }.to output("Welcome to NIM!").to_stdout
+    it 'start game with first configuration and computer plays smart' do
 
         io = StringIO.new
         io.puts '1'
@@ -48,10 +43,71 @@ describe Nim do
 
         $stdin = io
 
-        # @Nim.stub(:gets) {io}
         @Nim.start_game
+    end
 
-        # STDIN.should_receive(:gets).and_return("1", "1")
-        # @Nim.start_game
+    it 'start game, bad config, good config, smart computer' do
+
+        io = StringIO.new
+        io.puts '3'
+        io.puts '2'
+        io.puts '1'
+        io.rewind
+
+        $stdin = io
+
+        @Nim.start_game
+    end
+
+    it 'start game, bad config, good config, bad computer selection, smart computer' do
+        
+        io = StringIO.new
+        io.puts '3'
+        io.puts '2'
+        io.puts '6'
+        io.puts '1'
+        io.rewind
+
+        $stdin = io
+
+        @Nim.start_game
+    end
+
+    it 'start game, config board' do
+        io = StringIO.new
+        io.puts '1'
+        io.puts '1'
+        io.rewind
+
+        $stdin = io
+
+        @Nim.start_game
+        @Nim.configBoard
+    end
+
+    it 'start game, config board, run game' do
+        io = StringIO.new
+        io.puts '1'
+        io.puts '1'
+        io.rewind
+
+        $stdin = io
+
+        @Nim.start_game
+        @Nim.configBoard
+
+        while @Nim.gameOver == false
+            @Nim.display
+            @Nim.humanMakeMove
+            @Nim.checkGameOver
+            if @Nim.gameOver == false
+              @Nim.computerMakeMove
+              if @Nim.gameOver == true
+                puts "Computer player wins!"
+              end
+            else
+              puts "Human player wins!"
+            end
+          end
     end
 end
