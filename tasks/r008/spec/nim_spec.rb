@@ -42,8 +42,16 @@ describe Nim do
         # expect { @Nim.start_game(@output) }.to output("Welcome to NIM!").to_stdout
 
         io = StringIO.new
-        io.puts 1
-        io.puts 1
+        io.puts '1'
+        io.puts '1'
         io.rewind
+
+        $stdin = io
+
+        # @Nim.stub(:gets) {io}
+        @Nim.start_game
+
+        # STDIN.should_receive(:gets).and_return("1", "1")
+        # @Nim.start_game
     end
 end
