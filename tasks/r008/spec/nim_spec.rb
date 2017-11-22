@@ -33,4 +33,17 @@ describe Nim do
     it 'return true when check_kernel_state([4, 3, 7])' do
         expect(@Nim.object.check_kernel_state([4, 3, 7])).to eq true
     end
+
+    it 'testing output stdout' do
+        # expect do
+        #     @Nim.start_game
+        # end.to output("Welcome to NIM!").to_stdout
+
+        # expect { @Nim.start_game(@output) }.to output("Welcome to NIM!").to_stdout
+
+        io = StringIO.new
+        io.puts 1
+        io.puts 1
+        io.rewind
+    end
 end
