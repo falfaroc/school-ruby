@@ -1,0 +1,67 @@
+w001 is a `web task'.  In order to record practice on this task, you 
+will need to commit messages whose first line is:
+    RPT: w001 time
+where time is replaced by a numeric value less than or equal to 30 and
+corresponding to the amount of practice time (in minutes) you spent 
+since the last such commit on the task r011.  The body of the message will 
+tell how far you have gotten with the task so far and what problems, 
+if any, you are having completing the task.  Note that these commits 
+are not direct communications with the prof, but instead notes in your
+practice report which probably won't be read until the practice report is 
+marked.  By now you should be familiar with this routine and the various
+related wiki presentations, particularly
+  A Checklist for Week 2 and on's Practice
+and
+  On the marking of the first week of practice
+
+This particular task continues work with cucumber (see r009 for introduction
+to cucumber). 
+
+Step 1: We are going to install a web applications from the net called track.
+The following instructions are what I used last year and I have checked them
+out again and they work for me now.  However, as you may know from previous
+tasks, your experience on your system may vary from mine due to various
+configuration issues.
+
+  The web server we are going to look at for this task is Tracks.  Its home
+  page is http://www.getontracks.org/ .  It is basically an application for
+  maintaining your schedule.  If you are interested, the home page has a 
+  nice discussion of what it is about.
+
+  use git to download the TracksApp  
+     git clone https://github.com/TracksApp/tracks.git 
+  note you would do this outside your git repository and then copy in the
+  non .git directories, as you have no doubt encountered by now.
+
+  referring to the documentation on 
+     https://github.com/TracksApp/tracks/blob/master/doc/installation.md
+  install and run the software
+  
+   run in tracks directory:  bundle install --without development test mysql
+  
+   in config directory, copy database.yml.tmpl to database.yml
+    edit database.yml to comment out the mysql stuff and uncomment 
+    the sqlite stuff (this includes production and test tags)
+    NOTE: to make this simpler, I have put a copy of my edited database.yml
+          file in profStuff/samples/database.yml
+    the issue here is that most `real' web applications use a backend database,
+    such as postgres, which they communicate with thru sockets and requires
+    a bunch of installation in its own right.  sqlite implements an in-memory
+    database that goes away when the server quits, but is perfectly fine
+    for testing and other non-production stuff.
+
+    copy site.yml.tmpl to site.yml
+
+    back in the tracks directory: 
+       bundle exec rake db:migrate RAILS_ENV=production
+    sets up the stuff for initializing the sqlite database
+       bundle exec rake assets:precompile RAILS_ENV=production
+    brings in other things the server will make use of
+       bundle exec rails server -e production
+    launches the server.
+
+    you can now take a look at it from your web browser by visiting the url:
+                 http://localhost:3000/signup
+    at this point, your web browser is (hopefully) talking to your local
+    tracks server.
+
