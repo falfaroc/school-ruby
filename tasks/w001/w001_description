@@ -37,7 +37,9 @@ configuration issues.
      https://github.com/TracksApp/tracks/blob/master/doc/installation.md
   install and run the software
   
-   run in tracks directory:  bundle install --without development test mysql
+   run in tracks directory:  bundle install --without mysql
+(unlike the documentation, we will later want the test and development gems 
+ for tracks,  such as cucumber-rails and capybara)
   
    in config directory, copy database.yml.tmpl to database.yml
     edit database.yml to comment out the mysql stuff and uncomment 
@@ -64,4 +66,49 @@ configuration issues.
                  http://localhost:3000/signup
     at this point, your web browser is (hopefully) talking to your local
     tracks server.
+
+Step 2: We want to make sure we can control this server from cucumber.  So first
+we look at accessing it through irb as described in
+    https://wiki.csd.uwo.ca/pages/viewpage.action?pageId=17732137
+    Testing a Web App with Plain Ruby -- irb and Selenium (note)
+with additional comments in note at top of class material in
+    https://wiki.csd.uwo.ca/display/CS44722017/Notes+re+eleventh+class+%28Tuesday%29+28+Nov+2017
+If you are running selenium installed globally, then the above works fine.  If
+you are running selenium bundle installed, then instead of irb you would
+type:  bundle exec irb
+
+Step 3: Now we want to use Capybara rather than raw webdriver.  To see how
+this is done from irb, see:
+    https://medium.com/@farooqyousuf/live-browser-testing-with-capybara-and-irb-9148022a9ecf
+For me, this worked fine until I got to clicking on the button.  When I looked
+at the slave browser, I saw that although the search field had been filled in,
+the search hadn't been initiated.  This raised the question of how to send
+a carriage return after the fill_in .  
+
+This problem got me to:
+   https://stackoverflow.com/questions/10866946/how-do-i-simulate-hitting-enter-in-an-input-field-with-capybara-and-chromedriver
+which recommended 
+   find('#q_name').native.send_keys(:return)
+It turned out I didn't need the find, but instead needed to store the return
+value of the fill_in in a variable (x) and then I could just
+   x.native.send_keys(:return)
+This caused google to do the search.
+
+Step 4: Rather than playing with google, of course, we would rather play with
+tracks.  In this step, you log into tracks from irb.
+
+Step 5: Move Track's features directory out of the way (to features_old) and
+start your own features directory with
+       bundle exec cucumber -- init
+The Capybara page
+       https://github.com/teamcapybara/capybara#using-capybara-with-cucumber
+has instructions on how to use capybara in cucumber steps.  Note that
+the Gemfile mentions cucumber-rails already.  However, in order to load it,
+you need to have installed test and development (see above).
+Create a feature file for logging into tracks and step definitions to drive 
+it.  Be sure the test verifies that the log in worked.  For ideas on how this
+is done, see features_old/step_definitions/page_navigation_steps.rb and
+generic_steps.rb .
+
+
 
