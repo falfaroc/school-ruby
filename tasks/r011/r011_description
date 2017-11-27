@@ -24,7 +24,7 @@ I am interested specifically in the first programming question of the
    http://acm.student.cs.uwaterloo.ca/~acm00/96fall1/latex/fall96a.pdf
 Near the end of that page, there is sample input and output for the 
 problem.  Create a cucumber feature file corresponding to specifying
-that input and output.
+that input and output. -- DONE (maybe)
 
 Step 2: Create a file beancounting.rb that has a BeanCounting class which
 takes the input as a parameter to initialize and produces the output when
