@@ -18,7 +18,7 @@ This particular task continues work with cucumber (see r009 for introduction
 to cucumber). 
 
 Step 1:  Download the prime factorization program from 
-   https://github.com/AaronLasseigne/exercism-answers/tree/master/ruby/prime-factors
+   https://github.com/AaronLasseigne/exercism-answers/tree/master/ruby/prime-factors --DONE
 
 Step 2: Create the feature directory structure necessary for running cucumber
 into r010 and insert into it a copy of profStuff/sample/prime.feature .
