@@ -18,11 +18,11 @@ This particular task continues work with cucumber (see r009 for introduction
 to cucumber). 
 
 Step 1:  Download the prime factorization program from 
-   https://github.com/AaronLasseigne/exercism-answers/tree/master/ruby/prime-factors --DONE
+   https://github.com/AaronLasseigne/exercism-answers/tree/master/ruby/prime-factors -- DONE
 
 Step 2: Create the feature directory structure necessary for running cucumber
 into r010 and insert into it a copy of profStuff/sample/prime.feature .
-When you run cucumber, it should complain about my steps not being defined.
+When you run cucumber, it should complain about my steps not being defined. -- DONE
 
 Step 3: Guess what.  You get to implement the missing steps so that when
 cucumber runs my feature file it tests the prime_factors.rb code.  You may

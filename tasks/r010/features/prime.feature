@@ -1,14 +1,12 @@
 Feature: testing prime factors program
 
-Scenario: input prime factor, return prime_factor calculation
-Given I am computing the prime factors
-When I input 3
-Then I get back "3"
+Scenario Outline: input prime factor (<input>), return prime_factor calculation (<result>)
+  Given I am computing the prime factors
+  When I input <input>
+  Then I get back <result>
 
-Given I am computing prime factors
-When I input 8
-Then I get back "2,2,2"
-
-Given I am computing prime factors
-When I input 901255
-Then I get back "5,17,23,461"
+  Examples:
+    |   input  |      result     |
+    |     3    |       "3"       |
+    |     8    |     "2,2,2"     |
+    |  901255  |  "5,17,23,461"  |
