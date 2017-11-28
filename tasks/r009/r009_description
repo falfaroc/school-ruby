@@ -23,14 +23,14 @@ cucumber.  For doing this exercise, most of what you need is in
 Step 1:  From 
      https://gist.github.com/peterc/1582783
 cut and paste the code for gcd.rb into the r009 directory with that name.
-This code implements a particular approach to gcd called Stein's algorithm. --DONE
+This code implements a particular approach to gcd called Stein's algorithm.
 
 Step 2: Create the feature directory structure necessary for running cucumber
 into r009 and insert into it a copy of profStuff/sample/gcd.feature .
-When you run cucumber, it should complain about my steps not being defined. --DONE
+When you run cucumber, it should complain about my steps not being defined.
 
 Step 3: Guess what.  You get to implement the missing steps so that when
-cucumber runs my feature file it tests the gcd.rb code. --DONE
+cucumber runs my feature file it tests the gcd.rb code.
 
 Step 4: My feature file is rather tedious.  It would be nicer if I could
 group my input/ output values into a table.  Fortunately I can, see

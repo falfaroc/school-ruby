@@ -143,7 +143,7 @@ class PlainFormatter
   end
   def prologue
     puts <<-END_OF_STRING
-Third QUIZ: CS4472A Tuesday, 5 December 2017, 7:10 pm, Room MC17
+FIRST QUIZ: CS4472A Tuesday, 3 October 2017, 7:10 pm, Room MC17
 
 NAME AS APPEARS ON STUDENT ID:
 
@@ -225,7 +225,7 @@ class LatexFormatter
     puts <<-END_OF_STRING
 \\documentclass{exam}
 \\begin{document}
-THIRD QUIZ: CS4472A Tuesday, 5 December 2017, 7:10 pm, Room MC17\\newline
+FIRST QUIZ: CS4472A Tuesday, 3 October 2017, 7:10pm, Room MC17\\newline
 \\newline
 \\newline
 \\newline
