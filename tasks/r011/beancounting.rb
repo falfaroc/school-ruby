@@ -1,8 +1,7 @@
 class BeanCounting
-    @guesses = Hash.new(Hash.new)
-
     def initialize(input)
         @input = input 
+        @guesses = Hash.new(Hash.new)
         @beans = 'aadddddddddddddddddddddddffffffffffffffffwwwwwwwwwwwwccccalalala'
         string_count()
         string_split()
@@ -13,13 +12,22 @@ class BeanCounting
     end
 
     def string_split()
-        testing = "A a:6,c:6\nB w:12\nC d:25\nD d:22,c:4,l:3,f:15\n"
         arr_input = @input.split('\n')
-        # arr_input = @input.lines.map(&:chomp)
         for i in 0..arr_input.count-1 do
-            puts(arr_input[i][0])
+            loc = arr_input[i][0]
+            arr_input[i][0..1] = ''
+
+            arggg = arr_input[i].split(',')
+            for rest in 0..arggg.count-1 do
+                the_split = arggg[rest].partition(':')
+
+                # puts("FIRST: " + the_split[0] + " REST: " + the_split[2])
+                @guesses[loc][the_split[0]] = the_split[2]
+
+            end
         end
-        puts(arr_input[0][0])
+        # @guesses["A"].key?("b") -- Check for key?
+        puts ("HELLO: " + @guesses["A"].key?("b").to_s)
     end
 
     def message_count()
