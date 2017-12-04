@@ -1,16 +1,20 @@
 class BeanCounting
     def initialize(input)
         # @input = input 
-        @guesses = Hash.new(Hash.new)
+        @guesses = Hash.new
         @beans_count = Hash.new
-        @beans = 'aadddddddddddddddddddddddffffffffffffffffwwwwwwwwwwwwccccalalala'
-        string_count()
+        @contestant_share = Hash.new
+        @total_shares = 0
+        @total_guesses = 0
+        beans = 'aadddddddddddddddddddddddffffffffffffffffwwwwwwwwwwwwccccalalala'
+        string_count(beans)
         string_split(input)
     end
 
-    def string_count()
-        ("a".."z").each { |letter| puts letter }
-        puts  ("Number of a's: " + @beans.count('a').to_s + " d's: " + @beans.count('d').to_s + " f's: " + @beans.count('f').to_s + " w's: " + @beans.count('w').to_s + " c's: " + @beans.count('c').to_s + " l's: " + @beans.count('l').to_s)
+    def string_count(beans)
+        ('a'..'z').each { |letter| 
+            @beans_count[letter] = beans.count(letter).to_s
+        }
     end
 
     def string_split(input)
@@ -19,20 +23,44 @@ class BeanCounting
 
         for i in 0..@num_of_contestants-1 do
             loc = arr_input[i][0]
+            @guesses[loc] = Hash.new
             arr_input[i][0..1] = ''
 
             arggg = arr_input[i].split(',')
+            # @guesses[loc] = Hash.new
             for rest in 0..arggg.count-1 do
                 the_split = arggg[rest].partition(':')
 
-                # puts("FIRST: " + the_split[0] + " REST: " + the_split[2])
+                puts("FIRST: " + the_split[0] + " REST: " + the_split[2])
                 @guesses[loc][the_split[0]] = the_split[2]
+
+                @total_guesses += 1
+
+                # puts @guesses[loc][the_split[0]]
 
             end
         end
 
         # @guesses["A"].key?("b") -- Check for key?
         puts ("HELLO: " + @guesses["A"].key?("b").to_s)
+
+        calculate_share()
+    end
+
+    def calculate_share()
+        @guesses.each do |key, value|
+            @contestant_share[key] = 0
+            value.each do |k,v|
+                if(v == @beans_count[k])
+                    @contestant_share[key] += 2
+                elsif (v.to_i == @beans_count[k].to_i + 1 or v.to_i == @beans_count[k].to_i - 1)
+                    @contestant_share[key] += 1
+                end
+            end
+            @total_shares += @contestant_share[key]
+        end
+
+        puts "TOTAL SHARES: " + @total_shares.to_s + " TOTAL GUESSES: " + @total_guesses.to_s
     end
 
     def message_count()

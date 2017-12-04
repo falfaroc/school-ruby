@@ -4,7 +4,7 @@ end
 
 When(/I input (.*)/) do |inp|
     inp = inp.gsub /^"|"$/, '' #Removes quatation
-    print "INPUT: #{inp}"
+    print "INPUT: #{inp}\n"
 
     @result = BeanCounting.new(inp)
 end
