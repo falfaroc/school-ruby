@@ -3,9 +3,10 @@ Given(/I am computing the BeanCounter/) do
 end
 
 When(/I input (.*)/) do |inp|
-    # print "INPUT: #{inp}"
+    inp = inp.gsub /^"|"$/, '' #Removes quatation
+    print "INPUT: #{inp}"
+
     @result = BeanCounting.new(inp)
-    # @result = PrimeFactors.for(inp1)
 end
 
 Then(/I get back (.*)/) do |fin|
