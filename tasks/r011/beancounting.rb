@@ -19,9 +19,8 @@ class BeanCounting
 
     def string_split(input)
         arr_input = input.split('\n')
-        @num_of_contestants = arr_input.count
 
-        for i in 0..@num_of_contestants-1 do
+        for i in 0..arr_input.count-1 do
             loc = arr_input[i][0]
             @guesses[loc] = Hash.new
             arr_input[i][0..1] = ''
@@ -31,7 +30,7 @@ class BeanCounting
             for rest in 0..arggg.count-1 do
                 the_split = arggg[rest].partition(':')
 
-                puts("FIRST: " + the_split[0] + " REST: " + the_split[2])
+                # puts("FIRST: " + the_split[0] + " REST: " + the_split[2])
                 @guesses[loc][the_split[0]] = the_split[2]
 
                 @total_guesses += 1
@@ -42,7 +41,7 @@ class BeanCounting
         end
 
         # @guesses["A"].key?("b") -- Check for key?
-        puts ("HELLO: " + @guesses["A"].key?("b").to_s)
+        # puts ("HELLO: " + @guesses["A"].key?("b").to_s)
 
         calculate_share()
     end
@@ -60,10 +59,24 @@ class BeanCounting
             @total_shares += @contestant_share[key]
         end
 
-        puts "TOTAL SHARES: " + @total_shares.to_s + " TOTAL GUESSES: " + @total_guesses.to_s
+        # puts "TOTAL SHARES: " + @total_shares.to_s + " TOTAL GUESSES: " + @total_guesses.to_s
+    end
+
+    def calculate_contestant_share(value)
+        result = (((@total_guesses * 2) / @total_shares.to_f) * value)
     end
 
     def message_count()
+        message = ""
+        @contestant_share.each do |key, value|
+            result = calculate_contestant_share(value)
+            if result != 0 
+                tail = key + ": " + sprintf( "%0.02f", result) + "\n"
+                message << tail
+            end
+        end
+
+        message.chop
 
     end
 end
