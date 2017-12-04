@@ -3,7 +3,8 @@ Given(/I am computing the BeanCounter/) do
 end
 
 When(/I input (.*)/) do |inp|
-    print "INPUT: #{inp}"
+    # print "INPUT: #{inp}"
+    @result = BeanCounting.new(inp)
     # @result = PrimeFactors.for(inp1)
 end
 
