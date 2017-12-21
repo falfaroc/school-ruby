@@ -1,0 +1,92 @@
+1c1
+< total time reported is: 1339.0
+---
+> total time reported is: 1528.0
+618a619,705
+> 
+> commit e847e645916d0dbda51930ba985b372a48a205be
+> Author: Fernando Campos <falfaroc@uwo.ca>
+> Date:   Tue Nov 21 13:54:42 2017 -0500
+> 
+>     RPT: r008 30
+>     
+>     Completed steps 1 and 2. I am currently working on step 3. Converting from
+>     minitest to rspec went smoothly since I was able to base it off the previous
+>     tasks.
+> 
+> commit 8334b29da54214be25b1c7d47b6ddd84af0a503e
+> Author: Fernando Campos <falfaroc@uwo.ca>
+> Date:   Tue Nov 21 19:00:48 2017 -0500
+> 
+>     RPT: r008 26
+>     
+>     Currently working through Step 3. I have read through the provided documentation
+>     to understand how to test input and ouput. I have begun to attempt to write
+>     test cases to fulfill the simplecov coverage. Have not been able to find
+>     concrete examples on i/o tests using rspec.
+> 
+> commit 13cc9570fa743d81109ee232c3f8e91741593699
+> Author: Fernando Campos <falfaroc@uwo.ca>
+> Date:   Tue Nov 21 19:37:59 2017 -0500
+> 
+>     RPT: r008 30
+>     
+>     Still working on step 3. Currently workingo on developing rspec tests that
+>     handle i/o. All examples I've seen only handle one specifc i/o but many of the
+>     functions in nim contain multiple i/o.
+>     
+>     Tried different versions of rspec checks but so far none have worked properly.
+> 
+> commit cbb6f57cb3e4d6504f5c7ad252eb642540dc3c94
+> Author: Fernando Campos <falfaroc@uwo.ca>
+> Date:   Tue Nov 21 20:24:59 2017 -0500
+> 
+>     RPT: r008 30
+>     
+>     Still working on step 3. I was able to replicate the stdin in rspec as a user for one test.
+>     Now that I am able to send in stdin data in rspec, I can proceed to attempt to check stdout
+>     in a similar fashion.
+>     
+>     I got stuck for a bit trying to send in stdin data to the program. There are many different ways that
+>     are shown online and in the examples that I kept trying all of them and none of them seem to work.
+>     Luckily the one example shown by Tommasa Pavese worked and fulfulled the sending of stdin
+>     without modifying the nim.rb code.
+> 
+> commit 3a5e73276538f541d87b65cf19f445fcfee1cbf2
+> Author: Fernando Campos <falfaroc@uwo.ca>
+> Date:   Tue Nov 21 20:59:02 2017 -0500
+> 
+>     RPT: r008 30
+>     
+>     Working on steps 3 and 4 simultaneously. Step 3 in the sense that I still need to handle
+>     stdout properly, and step 4 in the sense that I am making test to fulfull the 100%
+>     coverage in simplecov. I am currently at 67.22% covered.
+>     
+>     Ran into the issue of not handling stdout properly and test would just break because it would skip
+>     sections. Working through trying to figure out how to handle stdout.
+> 
+> commit 442001960da877ab40d5ec5434024a1eb4228881
+> Author: Fernando Campos <falfaroc@uwo.ca>
+> Date:   Tue Nov 21 21:26:30 2017 -0500
+> 
+>     RPT: r008 23
+>     
+>     Completed the stdout handling of step 3 and moving to step4 to achieve 100% coverage
+>     in simplecov. Currently the simplecov covered is 61.47%.
+>     
+>     Ran into the obstacle of understanding how rspec handles the expects for stdout. There
+>     are many different ways to handled and similar to the stdin, all my previous attempts
+>     failed. Luckily a post on reformatcode.com had a very simple solution that is also
+>     displayed by Tommaso Pavese.
+> 
+> commit ea7d2cb99dd3238fd6fca845987221aff87acb5d
+> Author: Fernando Campos <falfaroc@uwo.ca>
+> Date:   Tue Nov 21 21:49:35 2017 -0500
+> 
+>     RPT: r008 20
+>     
+>     Working on step 4. Improved the simplecov coverage to 79.74. In order to play an entire game,
+>     I brute forced the inputs for the user. Need to see if there is any other way to go about
+>     that.
+>     
+>     Not any issues arose other than variable input depending on output has not been looked at.

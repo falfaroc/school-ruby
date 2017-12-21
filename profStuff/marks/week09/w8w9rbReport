@@ -1,0 +1,108 @@
+1c1
+< total time reported is: 1528.0
+---
+> total time reported is: 1711.0
+705a706,808
+> 
+> commit c2fde1e55dcc75578ff491e0dacc191c6398bb48
+> Author: Fernando Campos <falfaroc@uwo.ca>
+> Date:   Mon Nov 27 12:24:54 2017 -0500
+> 
+>     RPT: r009 23
+>     
+>     Downloaded and added gcd.rb in the r009 folder. Ran cucumber --init to setup the
+>     appropriate file structure to run cucumber. Copied the features file into that directory.
+>     
+>     When I attempted to run cucumber, it did not throw any errors or warnings even though
+>     the instructions said it would. Need to look into why it is not throwing any issues.
+> 
+> commit bf0c2aa899442aef36eae90238feb4293a65016c
+> Author: Fernando Campos <falfaroc@uwo.ca>
+> Date:   Mon Nov 27 12:55:02 2017 -0500
+> 
+>     RPT: r009 27
+>     
+>     Figured out why cucumber was not detecting the features file. Turns out that before
+>     each test you need the 'Scenario:' key word for cucumber to detect it. Without that key
+>     word, cucumber just displays 0 scenarios, 0 steps.
+>     
+>     Next I will be fixing up the scenarios to pass its given steps.
+> 
+> commit 79ad9d4fcd8312769cdfeafc2a2bc5227d07d2a1
+> Author: Fernando Campos <falfaroc@uwo.ca>
+> Date:   Mon Nov 27 13:28:25 2017 -0500
+> 
+>     RPT: r009 30
+>     
+>     Completed step 3. Created gcd_testing.rb in step_definition that handles the structure
+>     of the cucumber tests. Also, added the require_relative of gcd.rb in env.rb so that
+>     cucumber detects the gcd.rb function.
+>     
+>     Moving onto the final task for r009.
+> 
+> commit d64d55c0f0802268da31f98ac329cbc18e6a2436
+> Author: Fernando Campos <falfaroc@uwo.ca>
+> Date:   Mon Nov 27 13:42:29 2017 -0500
+> 
+>     RPT: r009 11
+>     
+>     Completed step 4 that restructured the inputs of the tests to be less tedious
+>     and better structured.
+>     
+>     The resource for this was very easy to follow which resulted in no issues
+>     during this task.
+> 
+> commit 3aec237af6dba42e9a8a46f35bb0a055ef6b2b70
+> Author: Fernando Campos <falfaroc@uwo.ca>
+> Date:   Mon Nov 27 14:07:08 2017 -0500
+> 
+>     RPT: r010 22
+>     
+>     Downloaded prime_factors.rb, initialized the required files for cucumber and
+>     copied over the prime.feature file to the correct location.
+>     
+>     Ran into the issue of cucumber displaying a parser error. Turns out that if
+>     the keyword 'Feature' begins with a lowercase 'f', cucumber is not able to
+>     detect the tests.
+> 
+> commit 44cbfe4073bfce84c6f52de2074039690a148b25
+> Author: Fernando Campos <falfaroc@uwo.ca>
+> Date:   Mon Nov 27 14:39:49 2017 -0500
+> 
+>     RPT: r010 30
+>     
+>     Created a prime_testing.rb that handles the step_definitions for the tests.
+>     Also, modified the testing so that it is done by a table instead of the
+>     original tedious way.
+>     
+>     Need to handle the array return so that it is split into an int array
+>     instead of a string.
+> 
+> commit 4371e2ea16f6c1bd51073b41650e9e62b6846177
+> Author: Fernando Campos <falfaroc@uwo.ca>
+> Date:   Mon Nov 27 14:56:35 2017 -0500
+> 
+>     RPT: r010 13
+>     
+>     Completed the final step (step 3) of r010. This was converting the string into
+>     an integer array so that we can compare the result of the function with what
+>     we expect.
+>     
+>     Ran into the issue of the first element resulting 0 while the rest were fine.
+>     I solved this by stripping the quotations from the string and then converting
+>     that into an integer array. It appeared that Ruby would escape the first quotation
+>     which then when attempting to split the string, the quotation would try to convert to
+>     an integer and thus resulting it to 0.
+> 
+> commit 5aebb82cb28f2939c154112d971baa45985f8d5c
+> Author: Fernando Campos <falfaroc@uwo.ca>
+> Date:   Mon Nov 27 15:26:55 2017 -0500
+> 
+>     RPT: r011 27
+>     
+>     Completed Step 1. Created the necessary files; Gemfile, beancounting.rb, bean_testing.rb,
+>     acm00.feature and modified env.rb to link to the correct file. Also, in the testing
+>     I created an input and output as specified in the question.
+>     
+>     Have not considered how the input is going to be handled as of right now but I
+>     believe the base work is done for input and output.
